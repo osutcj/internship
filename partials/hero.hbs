@@ -5,7 +5,8 @@ for it, and apply those styles to the <header> tag.
 
 {{#if background}}
   <section class="m-hero with-picture" data-aos="fade">
-    <div class="m-hero__picture {{#is "post"}}in-post{{/is}}">
+    {{!--! Opacity 1 is best used when there is no hero text! --}}
+    <div class="m-hero__picture {{#is "post"}}in-post{{/is}}" style="opacity: 1 !important;">
       <img
         srcset="
           {{img_url background size="s"}} 300w,
