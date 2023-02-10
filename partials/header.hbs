@@ -112,6 +112,19 @@ This header template is shared across all the pages.
                         </ul>
                       {{/get}}
                     </section>
+                    <section class="m-tags">
+                      {{#get "tags"}}
+                        <ul>
+                          {{#foreach tags}}
+                            <li>
+                              <a href="{{url}}">{{name}}</a>
+                            </li>
+                            {{else}}
+                              <li class="m-not-found">{{t "No tags found :("}}</li>
+                          {{/foreach}}
+                        </ul>
+                      {{/get}}
+                    </section>
                   </div>
                 </div>
               </li>
