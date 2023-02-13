@@ -124,12 +124,24 @@
   margin-bottom: 3rem !important;
 }
 
+.col-md-1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
 .fs-2 {
-  font-size: calc(1.325rem + 0.9vw) !important;
+  font-size: calc(1.295rem + 0.9vw) !important;
+  font-family: 'poppins';
+}
+
+.font-poppins{
+  font-family: 'poppins';
+  font-size: 12;
 }
 
 .fw-bold {
   font-weight: 700 !important;
+  font-family: 'poppins';
 }
 
 .flex-column-reverse {
@@ -167,20 +179,31 @@
 }
 .image-2{
   border-radius: 16px;
-  background-image: url('/assets/images/2.jpg');  
+  background-image: url('/assets/images/pozabuna.jpg');  
   background-size:cover;
   background-repeat: no-repeat;
   max-width: 100%;
   width: 500px;
   height: 375px;
-  margin-top: 6rem;
+  margin-top: 10rem;
   margin-left: 5rem;
 }
 
 .image-1{
-  margin-top: 5rem;
+  margin-top: 7rem;
   border-radius: 16px;
-  background-image: url('/assets/images/3.jpg');  
+  background-image: url('/assets/images/pozabuna2.jpg');  
+  background-size:cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  width: 500px;
+  height: 375px;
+}
+
+.image-3{
+  margin-top: 8rem;
+  border-radius: 16px;
+  background-image: url('/assets/images/2.jpg');  
   background-size:cover;
   background-repeat: no-repeat;
   max-width: 100%;
@@ -206,13 +229,17 @@
     text-align: center;
   }
   .margin-phone{
-    margin-top: -9rem;
+    margin-top: -3rem;
   }
   .image-2{
     margin-left: auto;
     margin-right: auto;
   }
   .image-1{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .image-3{
     margin-left: auto;
     margin-right: auto;
   }
