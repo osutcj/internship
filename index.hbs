@@ -15,6 +15,7 @@ It can be used also as the home page or the default page.
   <link rel="stylesheet" type="text/css" href="{{asset "css/home.css"}}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/listing.css"}}" media="screen" />
   <link rel="stylesheet" href="{{asset "css/bootstrap-landing.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori.css"}}" media="screen" />
 {{/contentFor}}
 
 {{!-- The tag below means: insert everything in this file
@@ -279,6 +280,8 @@ into the {body} of the default.hbs template --}}
         <div class="col-sm-12 col-md-1"></div>
     </div>
   </div>
+
+
   <div class="l-content" id="oferte" style="border-top: 1px solid gray;">
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
       <div class="l-grid centered position-phone">
@@ -309,6 +312,10 @@ into the {body} of the default.hbs template --}}
                           <div id="featured-bg-{{id}}"></div>
                         {{/if}}
                       </div>
+
+
+
+                      
                       <div class="m-featured-article__meta">
                         <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
                           {{#if primary_author.profile_image}}
@@ -337,8 +344,14 @@ into the {body} of the default.hbs template --}}
                       </a>
                     </article>
                   </div>
+
+
+                  
                 {{/foreach}}
               </div>
+
+
+              
               <button class="m-icon-button in-featured-articles swiper-button-prev js-featured-slider-button" aria-label="{{t "Previous"}}">
                 <span class="icon-arrow-left" aria-hidden="true"></span>
               </button>
@@ -355,6 +368,24 @@ into the {body} of the default.hbs template --}}
     {{!-- Links to Previous/Next posts --}}
     {{pagination}}
   </div>
+<section class = "sponsori-content" style="text-align:center">
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor"><span class = "line">--</span>Parteneri prezenți la InfoNight<span class = "line">--</span></h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg">
+               <div class = "card-img img-1" href="facebook.com"></div>
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-2"></div>
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-3"></div>    
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-4"></div>  
+            </div>
+      </section>
 </main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
