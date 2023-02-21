@@ -127,7 +127,7 @@ body {
 .card-bg {
     display: flex;
     flex-direction: column;
-    background-image:  url("/content/images/white.png");
+    background-color: white;
     background-size: 200%;
     margin: 25px;
     width: 250px;
