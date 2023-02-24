@@ -17,7 +17,7 @@ body {
 }
 
 .img-1 {
-    background-image: url("/content/images/sponsors/logo-broadbridge.svg");
+    background-image: url("/content/images/sponsors/diamond/logo-arobs.png");
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,7 +25,7 @@ body {
 
 
 .img-2 {
-    background-image: url("/content/images/sponsors/logo-arobs.png");
+    background-image: url("/content/images/sponsors/diamond/logo-continental.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -33,18 +33,111 @@ body {
 
 
 .img-3 {
-    background-image: url("/content/images/sponsors/logo-marelli.svg");
+    background-image: url("/content/images/sponsors/platinum/logo-broadbridge.svg");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .img-4 {
-    background-image: url("/content/images/sponsors/logo-synopsys.png");
+    background-image: url("/content/images/sponsors/platinum/logo-emerson.png");
     background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
 }
+.img-5 {
+    background-image: url("/content/images/sponsors/platinum/logo-marelli.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-6 {
+    background-image: url("/content/images/sponsors/platinum/logo-nagarro.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-7 {
+    background-image: url("/content/images/sponsors/platinum/logo-pfeiffer.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-8 {
+    background-image: url("/content/images/sponsors/platinum/logo-synopsys.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-9 {
+    background-image: url("/content/images/sponsors/platinum/logo-ultratech.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-10 {
+    background-image: url("/content/images/sponsors/platinum/logo-nagarro.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-11 {
+    background-image: url("/content/images/sponsors/gold/logo-kesz.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-12 {
+    background-image: url("/content/images/sponsors/gold/logo-riverbed.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-13 {
+    background-image: url("/content/images/sponsors/silver/logo-autonet.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-14 {
+    background-image: url("/content/images/sponsors/silver/logo-cona.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-15 {
+    background-image: url("/content/images/sponsors/silver/logo-linnify.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-16 {
+    background-image: url("/content/images/sponsors/silver/logo-mediserv.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-17 {
+    background-image: url("/content/images/sponsors/silver/logo-rootier.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-18 {
+    background-image: url("/content/images/sponsors/bronze/logo-fanuc.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-19 {
+    background-image: url("/content/images/sponsors/bronze/logo-hilti.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
 
 .icon-h {
     display: flex;
@@ -95,6 +188,7 @@ body {
     height: 250px;
     padding: 30px;
     border-radius: 3rem;
+    background-color: white;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 10px;
     transition: 0.5s;
 }
@@ -105,7 +199,7 @@ body {
 
 
 .card-img {
-    border-radius: 50%;
+    
     width: 225px;
     height: 225px;
     align-self: center;
