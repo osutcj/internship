@@ -187,10 +187,25 @@ body {
     width: 250px;
     height: 250px;
     padding: 30px;
-    border-radius: 3rem;
+    border-radius: 2rem;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px 10px;
     transition: 0.5s;
+}
+
+.card-diamond{
+    box-shadow: #61e2ffa6 10px 5px 4px 5px; 
+}
+.card-platinum{
+    box-shadow: #72b5b5a6 10px 5px 4px 5px; 
+}
+.card-gold{
+    box-shadow: #ffd900a6  10px 5px 4px 5px; 
+}
+.card-silver{
+    box-shadow: #ada9aac6 10px 5px 4px 5px; 
+}
+.card-bronze{
+    box-shadow: #CD7F32a6 10px 5px 4px 5px; 
 }
 
 .card-bg:hover {
