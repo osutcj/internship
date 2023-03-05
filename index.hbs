@@ -277,7 +277,10 @@ into the {body} of the default.hbs template --}}
         <div class="col-sm-12 col-md-1"></div>
     </div>
   </div>
-  <div class="l-content" id="oferte" style="border-top: 1px solid gray;">
+
+
+
+<div class="l-content" id="oferte" style="border-top: 1px solid gray;">
     <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
       <div class="l-grid centered position-phone">
         <a href="/oferte-active/" class="m-button filled">Vezi ofertele active</a>
@@ -353,6 +356,43 @@ into the {body} of the default.hbs template --}}
     {{!-- Links to Previous/Next posts --}}
     {{pagination}}
   </div>
+
+
+
+
+
+
+
+
+
+
+
+{{!--
+<div class="l-content" id="oferte" style="border-top: 1px solid gray;">
+    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
+        <div style="display: flex; justify-content:space-around">
+          <button onclick="labsFunction()" class="m-button filled"> laboratoare</button>
+          <button onclick="ofertsFunction()" class="m-button filled">oferte</button>
+          <button  onclick="standsFunction()" class="m-button filled">standuri</button>
+        </div>
+        <br>
+        <br>
+        <div id="ContentAltCeva">
+          <div id="labs" style="display: none" >
+            {{> "labs"}}
+          </div> 
+          <div id="stands" style="display: none">
+            {{> "stands"}}
+          </div>
+          <div id="oferts" style="display: inline">
+            {{> "oferte"}}
+          </div>
+             
+        </div>
+      
+    </div>
+</div>
+--}}
   <section class = "sponsori-content" style="text-align:center">
          <div class = "category-title platinum">
             <h1 class = "title-sponsor">Parteneri prezenți la InfoNight</h1>
@@ -394,4 +434,21 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
   <script defer src="{{asset "js/home.js"}}"></script>
+  {{!--<script>
+  function labsFunction() {
+  document.getElementById("oferts").style.display = "none";
+  document.getElementById("labs").style.display = "inline";
+  document.getElementById("stands").style.display = "none";
+}
+  function standsFunction() {
+  document.getElementById("oferts").style.display = "none";
+  document.getElementById("labs").style.display = "none";
+  document.getElementById("stands").style.display = "inline";
+}
+  function ofertsFunction() {
+  document.getElementById("oferts").style.display = "inline";
+  document.getElementById("labs").style.display = "none";
+  document.getElementById("stands").style.display = "none";
+}
+  </script>--}}
 {{/contentFor}}

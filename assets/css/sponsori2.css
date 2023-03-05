@@ -238,6 +238,7 @@ body {
         padding: 30px;
         background: #333;
         color: white;
+        background-color: white;
     }
 }
 
@@ -258,6 +259,7 @@ body {
         padding: 30px;
         background: #333;
         color: white;
+        background-color: white;
     }
 
     .card-title {
@@ -288,6 +290,7 @@ body {
         margin: 25px 0;
         width: 270px;
         padding: 30px;
+        background-color: white;
     }
 
     .card-title {
