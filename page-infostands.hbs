@@ -1,0 +1,80 @@
+{{!--
+This template is used for the posts that are marked as pages.
+--}}
+
+{{!-- This block preloads specific assets for the post page --}}
+{{#contentFor "preload"}}
+  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+{{/contentFor}}
+
+{{!-- This block loads specific styles for the post page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/orar-stands.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> header background=feature_image}}
+{{/post}}
+<main class="main-wrap">
+  {{!-- Everything inside the #post tags pulls data from the post --}}
+  {{#post}}
+    {{!-- Inject styles of the hero image to make it responsive --}}
+    {{> hero background=feature_image}}
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">{{title}}</h1>
+      {{#if custom_excerpt}}
+        <p class="m-hero-description">{{custom_excerpt}}</p>
+      {{/if}}
+    </div>
+    </section>
+    <br>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Electro')" id="defaultOpen">Electro</button>{{!--
+        --}}<button class="tablinks" onclick="openCity(event, 'Constructii')">Constructii</button>{{!--
+        --}}<button class="tablinks" onclick="openCity(event, 'Mecanica')">Mecanica</button>
+    </div>
+
+    <div id="Electro" class="tabcontent">
+        <iframe class="excel" frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRvE8IcamPdKxgdderGTp03_-gBHMD91P9zZRy1899Xyd8esUpptycZW0u_VDFxDVueyfeB4aL0h_ej/pubhtml?gid=1139993180&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+
+    <div id="Constructii" class="tabcontent">
+        <iframe class="excel" frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRvE8IcamPdKxgdderGTp03_-gBHMD91P9zZRy1899Xyd8esUpptycZW0u_VDFxDVueyfeB4aL0h_ej/pubhtml?gid=2122592187&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+
+    <div id="Mecanica" class="tabcontent">
+        <iframe class="excel" frameborder="0"  src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRvE8IcamPdKxgdderGTp03_-gBHMD91P9zZRy1899Xyd8esUpptycZW0u_VDFxDVueyfeB4aL0h_ej/pubhtml?gid=1994035373&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
+    <br>
+  {{/post}}
+</main>
+
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+{{/contentFor}}
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>
