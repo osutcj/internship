@@ -1852,3 +1852,26 @@
     position:absolute;
 
 }
+
+.box-editii{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.editii{
+    padding: 10px;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 10px;
+    border-style: solid;
+    font-size: large;
+    transition: color .2s linear;
+}
+
+.editii:hover{
+    color: var(--link-color)
+}
