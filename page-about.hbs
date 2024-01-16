@@ -214,7 +214,7 @@ into the {body} of the default.hbs template --}}
     {{> hero background=feature_image}}
     <div class="m-hero__content" data-aos="fade-down">
       <h1 class="m-hero-title bigger">{{title}}</h1>
-      <a href="{{@site.url}}#oferte" class="m-button filled">Vezi ofertele</a>
+      {{!-- <a href="{{@site.url}}#oferte" class="m-button filled">Vezi ofertele</a> --}}
       
       {{#if custom_excerpt}}
         <p class="m-hero-description">{{custom_excerpt}}</p>
