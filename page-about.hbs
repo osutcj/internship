@@ -211,17 +211,17 @@ into the {body} of the default.hbs template --}}
   {{!-- Everything inside the #post tags pulls data from the post --}}
   {{#post}}
     {{!-- Inject styles of the hero image to make it responsive --}}
-    {{> hero background=feature_image}}
+     {{> hero background=feature_image}} 
     <div class="m-hero__content" data-aos="fade-down">
       <h1 class="m-hero-title bigger">{{title}}</h1>
-      <a href="{{@site.url}}#oferte" class="m-button filled">Vezi ofertele</a>
+      {{!-- <a href="{{@site.url}}#oferte" class="m-button filled">Vezi ofertele</a> --}}
       
       {{#if custom_excerpt}}
         <p class="m-hero-description">{{custom_excerpt}}</p>
       {{/if}}
     </div>
     </section>
-    {{!-- <article>
+    <article>
       <div class="l-content">
         <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
           <div class="l-post-content">
@@ -239,7 +239,7 @@ into the {body} of the default.hbs template --}}
           </div>
         </div>
       </div>
-    </article> --}}
+    </article>
   {{/post}}
   <div class = "category-title platinum" style="text-align:center">
             <h1 class = "title-sponsor">Vezi cum a fost anul trecut</h1>
