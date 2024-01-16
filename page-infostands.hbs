@@ -34,11 +34,20 @@ into the {body} of the default.hbs template --}}
       {{/if}}
     </div>
     </section>
-    <br>
+    <div class="l-content">
+        <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+          <div class="l-post-content">
+            <div class="pos-relative js-post-content" style="text-align: center">
+              {{content}}
+            </div>
+          </div>
+        </div>
+      </div>
+    {{!-- <br>
     <div class="tab">
-        <button class="tablinks" onclick="openCity(event, 'Electro')" id="defaultOpen">Electro</button>{{!--
-        --}}<button class="tablinks" onclick="openCity(event, 'Constructii')">Constructii</button>{{!--
-        --}}<button class="tablinks" onclick="openCity(event, 'Mecanica')">Mecanica</button>
+        <button class="tablinks" onclick="openCity(event, 'Electro')" id="defaultOpen">Electro</button>
+        <button class="tablinks" onclick="openCity(event, 'Constructii')">Constructii</button>
+        <button class="tablinks" onclick="openCity(event, 'Mecanica')">Mecanica</button>
     </div>
 
     <div id="Electro" class="tabcontent">
@@ -52,7 +61,7 @@ into the {body} of the default.hbs template --}}
     <div id="Mecanica" class="tabcontent">
         <iframe class="excel" frameborder="0"  scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRvE8IcamPdKxgdderGTp03_-gBHMD91P9zZRy1899Xyd8esUpptycZW0u_VDFxDVueyfeB4aL0h_ej/pubhtml?gid=1994035373&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
     </div>
-    <br>
+    <br> --}}
   {{/post}}
 </main>
 
