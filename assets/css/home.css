@@ -264,3 +264,9 @@
 .m-featured-article__timestamp span:nth-child(2) {
     padding: 0 10px
 }
+
+.m-recommended-slider__item{
+    display: none;
+
+
+}
