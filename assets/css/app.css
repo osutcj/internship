@@ -793,7 +793,8 @@ fieldset {
 
 @media only screen and (min-width:48rem) {
     .l-wrapper.in-post.no-image {
-        padding-top: 80px
+        padding-top: 80px;
+        
     }
 }
 
@@ -803,11 +804,19 @@ fieldset {
 
 .l-content {
     padding: 40px 0 20px
+    
+}
+
+.background-visual{
+    background-image: url("/assets/images/vizual.png");
+    background-position: center;
+    background-size: cover
 }
 
 @media only screen and (min-width:48rem) {
     .l-content {
-        padding: 60px 0 40px
+        padding: 60px 0 40px;
+        
     }
 }
 
