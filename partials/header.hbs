@@ -35,14 +35,24 @@ This header template is shared across all the pages.
   width: 100%;
 
 }
-
-.buton-osut img{
+@media only screen and (max-width: 767px) {
+  .buton-osut img {
+    width: 25%;
+    margin-bottom: 1%;
+    margin-left: 3%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .buton-osut img{
   height: 100%;
   width: 100%;
   margin-bottom: 2%;
   margin-left: 5%;
   
 }
+}
+
+
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
