@@ -29,6 +29,18 @@ This header template is shared across all the pages.
   background: #55ACEE;
   color: white;
 }
+
+.buton-osut{
+  height: 100%;
+  width: 9%;
+
+}
+
+.buton-osut img{
+  height: 100%;
+  width: 100%;
+  
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -63,10 +75,13 @@ This header template is shared across all the pages.
       <span class="icon-close"></span>
     </button>
     <div class="m-menu__main" data-aos="fade-down">
+      
       <div class="l-wrapper">
+        
         <div class="m-nav js-main-nav">
-          {{!-- <button onclick="https://osut.org"> &lt;-- OSUT </button> --}}
+          
           <nav class="m-nav__left js-main-nav-left" role="navigation" aria-label="{{t "Main menu"}}" style="position: relative;">
+            
             <ul>
               {{#if @site.logo}}
                 <li class="only-desktop">
@@ -159,11 +174,14 @@ This header template is shared across all the pages.
                     {{#if @site.facebook}}
                         <a class="gh-social-facebook" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">
                             <i class="fa fa-facebook" style="border: 3px solid white; width: 30px; border-radius: 30px; padding-top: 3px; padding-bottom: 1px; padding-right: 5px; padding-left: 5px; "></i>
-                        </a>
+                        </a>                        
                     {{/if}}
                     
                     <a class="gh-social-instagram" href="https://www.instagram.com/infotech.osut/" title="Instagram" target="_blank">
                         <i class="fa fa-instagram" style="font-size: 30px;"></i>
+                    </a>
+                    <a class="buton-osut" href="https://osut.org" title="Osut" target="_blank">
+                    <img src="https://osut.org/content/images/2022/09/OSUT-ghost-black.png">
                     </a>
                 </div>
           </nav>
