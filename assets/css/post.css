@@ -184,8 +184,8 @@
     }
     .container20 img{
         margin-top: 100px;
-        width: 90%;
-        height: 70%;
+        width: 100%;
+        height: auto;
     }
 }
 
@@ -347,7 +347,7 @@
     display: flex;
     flex-direction: row; /* Aligns child elements in a row */
     justify-content: center; /* Centers the containers horizontally */
-    align-items: stretch; /* Ensure containers stretch to equal heights */
+    align-items: center; /* Ensure containers stretch to equal heights */
     margin:  auto; /* Centers the flex container with equal left and right margins */
     padding: 0; /* Remove any padding from the flex container */
     max-width: 90%; /* Restrict the container width to 90% of the viewport */
