@@ -586,7 +586,7 @@
 
 /* Text */
 .p {
-    font-size: 1vw;
+    font-size: 100%;
     padding: 5px;
     text-align: justify;
 }
