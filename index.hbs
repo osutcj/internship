@@ -8,6 +8,10 @@ It can be used also as the home page or the default page.
   <link rel="preload" href="{{asset "css/home.css"}}" as="style" />
   <link rel="preload" href="{{asset "css/listing.css"}}" as="style" />
   <link rel="preload" href="{{asset "js/home.js"}}" as="script" />
+ <link rel="preload" href="{{asset "js/lumina.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/slideshow.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
+
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the index page --}}
@@ -25,404 +29,54 @@ into the {body} of the default.hbs template --}}
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{> header background=@site.cover_image}}
 
-<main class="main-wrap">
-  
-  {{!-- Inject styles of the hero image to make it responsive --}}
-  {{> hero background=@site.cover_image}}
-  {{!-- <div class="m-hero__content" data-aos="fade-down">
-    <h1 class="m-hero-title bigger">{{@site.title}}</h1>
-    {{#if @site.description}}
-      <p class="m-hero-description bigger">{{@site.description}}</p>
-    {{/if}}
-    {{#if @custom.use_custom_cta}}
-      <a href="{{@custom.custom_cta_url}}" class="m-button filled">{{@custom.custom_cta_text}}</a>
-    {{else}}
-      {{#if @site.members_enabled}}
-        <a href="{{@site.url}}/newsletter" class="m-button filled js-newsletter">{{t "Subscribe"}}</a>
-      {{/if}}
-    {{/if}}
-  </div> --}}
-  </section>
-  <div class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="pt-0 pt-md-5 col-sm-12 col-md-6 d-flex flex-column p-5">
-                <div class="pt-0 pt-md-5 p-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                        class="bi bi-lightbulb align-self-start mb-5" viewBox="0 0 16 16">
-                        <path
-                            d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z" />
-                    </svg>
-                    <p class="fs-2 fw-bold">
-                        InfoTech, proiectul de tradiție al OSUT Cluj, este organizat sub forma unui târg de cariere și pornește de la nevoile profesionale ale studenților. 
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 d-flex flex-column">
-                <div class="p-5 image-1">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12 col-md-6 d-flex flex-column">
-                <div class="p-5 image-2">
-                </div>
-            </div>
-            <div class="pt-0 pt-md-5 col-sm-12 col-md-6 d-flex justify-content-center align-items-center flex-column p-5" style="margin-top: 2rem;">
-                <div class="pt-0 pt-md-5 p-5" style="
-                        border-radius: 16px;
-                        margin-top: auto; 
-                    ">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="70" height="70" class="align-self-start mb-5">
-                      <rect width="256" height="256" fill="none"></rect>
-                      <path d="M226.5,56.4l-96-32a8.5,8.5,0,0,0-5,0l-95.9,32h-.2l-1,.5h-.1l-1,.6c0,.1-.1.1-.2.2l-.8.7h0l-.7.8c0,.1-.1.1-.1.2l-.6.9c0,.1,0,.1-.1.2l-.4.9h0l-.3,1.1v.3A3.7,3.7,0,0,0,24,64v80a8,8,0,0,0,16,0V75.1L73.6,86.3A63.2,63.2,0,0,0,64,120a64,64,0,0,0,30,54.2,96.1,96.1,0,0,0-46.5,37.4,8.1,8.1,0,0,0,2.4,11.1,7.9,7.9,0,0,0,11-2.3,80,80,0,0,1,134.2,0,8,8,0,0,0,6.7,3.6,7.5,7.5,0,0,0,4.3-1.3,8.1,8.1,0,0,0,2.4-11.1A96.1,96.1,0,0,0,162,174.2,64,64,0,0,0,192,120a63.2,63.2,0,0,0-9.6-33.7l44.1-14.7a8,8,0,0,0,0-15.2ZM128,168a48,48,0,0,1-48-48,48.6,48.6,0,0,1,9.3-28.5l36.2,12.1a8,8,0,0,0,5,0l36.2-12.1A48.6,48.6,0,0,1,176,120,48,48,0,0,1,128,168Z" fill="currentColor">
-                      </path>
-                    </svg>
-                    <p class="fs-2 fw-bold">
-                        Acesta urmărește dezvoltarea competențelor specifice și consolidează relației dintre student și companii.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="pt-0 pt-md-5 col-sm-12 col-md-6 d-flex flex-column p-5">
-                <div class="pt-0 pt-md-5 p-5">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="80" height="80">
-                      <path d="M10 16v-1H3.01L3 19c0 1.11.89 2 2 2h14c1.11 0 2-.89 2-2v-4h-7v1h-4zm10-9h-4.01V5l-2-2h-4l-2 2v2H4c-1.1 0-2 .9-2 2v3c0 1.11.89 2 2 2h6v-2h4v2h6c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 0h-4V5h4v2z"/>
-                    </svg>
-                    <br>
-                    <br>
-                    <p class="fs-2 fw-bold">
-                        Proiectul InfoTech are la bază o bună colaborare cu firmele de profil specifice specializărilor din Universitatea Tehnică din Cluj-Napoca.
-                    </p>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 d-flex flex-column">
-                <div class="p-5 image-3">
-                </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <div class="py-5 vizibil">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-                <div>
-                    {{!-- <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" class="top-space">
-                          <line x1="176" y1="48" x2="336" y2="48" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
-                          <line x1="118" y1="304" x2="394" y2="304" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
-                          <path d="M208,48v93.48a64.09,64.09,0,0,1-9.88,34.18L73.21,373.49C48.4,412.78,76.63,464,123.08,464H388.92c46.45,0,74.68-51.22,49.87-90.51L313.87,175.66A64.09,64.09,0,0,1,304,141.48V48" 
-                          style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
-                    </div> --}}
-                    <div>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-moon top-space" viewBox="0 0 16 16"> 
-                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
-                    </svg> 
-                  </div>
-                    <div class="card-body">
-                        <h1 class="card-title">InfoNight</h1>
-                        <h2 class="card-title"> 27 Februarie 2024 </h2>
-                        {{!-- <p class="position-phone font-poppins">
-                            urmăresc pregătirea profesională a studenților prin activitățile derulate 
-                            de către profesori sau reprezentanții companiilor. 
-                        </p> --}}
-                    </div>
-                </div>
-            </div>
-            {{!-- <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-                <div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-trophy top-space" viewBox="0 0 16 16">
-                         <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title">Concursul</h1>
-                        <h2 class="card-title">27 Martie - 6 Aprilie 2023</h2>
-                        <p class="position-phone font-poppins">
-                            (organizat doar pe ramurile de Construcții și Mecanică) îmbină perfect munca în echipă cu competivitatea și inovația colectivă. 
-                        </p>
-                    </div>
-                </div>
-            </div> --}}
-            <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-                <div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people top-space" viewBox="0 0 16 16"> 
-                          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title">Standurile</h1>
-                        <h2 class="card-title">4 Martie - 8 Martie 2024</h2>
-                        <p class="position-phone font-poppins">
-                            Oferă oportunitatea întâlnirii cu firmele specifice domeniului de studiu și familiarizarea cu activitatea acestora.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-          {{!-- <div class="col-sm-12 col-md-1"></div>
-          <div class="col-sm-12 col-md-1"></div> --}}
-          {{!-- <div class="col-sm-12 col-md-3" style="text-align: center;">
-              <div style="margin-left: auto; margin-right:auto">
-                  <div>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-moon top-space" viewBox="0 0 16 16"> 
-                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
-                    </svg> 
-                  </div>
-                  <div class="card-body">
-                      <h1 class="card-title"> InfoNight</h1>
-                      <h2 class="card-title"> 27 Februarie 2024 </h2>
-                  </div>
-              </div>
-          </div> --}}
-          {{!-- <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-              <div>
-                  <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-trophy top-space" viewBox="0 0 16 16">
-                        <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
-                      </svg>
-                  </div>
-                  <div class="card-body">
-                      <h1 class="card-title">Gala InfoTech x Polihack</h1>
-                      <h2 class="card-title">27 Martie - 6 Aprilie 2023</h2>
-                  </div>
-              </div>
-          </div> --}}
-          {{!-- <div class="col-sm-12 col-md-1"></div>
-          <div class="col-sm-12 col-md-1"></div> --}}
-        </div>
-    </div>
-  </div>
-  <div class="py-5 vizibil-phone">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-sm-12 col-md-3" style="text-align: center;">
-              <div style="margin-left: auto; margin-right:auto">
-                  <div>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-moon top-space" viewBox="0 0 16 16"> 
-                      <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278zM4.858 1.311A7.269 7.269 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.316 7.316 0 0 0 5.205-2.162c-.337.042-.68.063-1.029.063-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286z"/>
-                    </svg> 
-                  </div>
-                  <div class="card-body">
-                      <h1 class="card-title"> InfoNight</h1>
-                      <h2 class="card-title"> 27 Februarie 2024 </h2>
-                  </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-                <div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-people top-space" viewBox="0 0 16 16"> 
-                          <path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/>
-                        </svg>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title">Standurile</h1>
-                        <h2 class="card-title">4 Martie - 8 Martie 2024</h2>
-                        <p class="position-phone font-poppins">
-                            oferă oportunitatea întâlnirii cu firmele specifice domeniului de studiu și familiarizarea cu activitatea acestora.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {{!-- <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-                <div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 512 512" class="top-space">
-                          <line x1="176" y1="48" x2="336" y2="48" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
-                          <line x1="118" y1="304" x2="394" y2="304" style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/>
-                          <path d="M208,48v93.48a64.09,64.09,0,0,1-9.88,34.18L73.21,373.49C48.4,412.78,76.63,464,123.08,464H388.92c46.45,0,74.68-51.22,49.87-90.51L313.87,175.66A64.09,64.09,0,0,1,304,141.48V48" 
-                          style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px"/></svg>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title">Laboratoarele</h1>
-                        <h2 class="card-title"> 13 Martie - 31 Martie 2023 </h2>
-                        <p class="position-phone font-poppins">
-                            urmăresc pregătirea profesională a studenților prin activitățile derulate 
-                            de către profesori sau reprezentanții companiilor. 
-                        </p>
-                    </div>
-                </div>
-            </div>    --}}
-        {{!-- </div> --}}
-        {{!-- <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-            <div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-trophy top-space" viewBox="0 0 16 16">
-                      <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title">Concursul</h1>
-                    <h2 class="card-title">27 Martie - 6 Aprilie 2023</h2>
-                    <p class="position-phone font-poppins">
-                        (organizat doar pe ramurile de Construcții și Mecanică) îmbină perfect munca în echipă cu competivitatea și inovația colectivă. 
-                    </p>
-                </div>
-            </div>
-        </div> --}}
-        {{!-- <div class="col-sm-12 col-md-3" style="text-align: center; margin-left: auto; margin-right:auto;">
-            <div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-trophy top-space" viewBox="0 0 16 16">
-                      <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
-                    </svg>
-                </div>
-                <div class="card-body">
-                    <h1 class="card-title">Gala InfoTech x Polihack</h1>
-                    <h2 class="card-title">27 Martie - 6 Aprilie 2023</h2>
-                </div>
-            </div>
-        </div> --}}
-        {{!-- <div class="col-sm-12 col-md-1"></div>
-        <div class="col-sm-12 col-md-1"></div> --}}
-    </div>
+<style>
+  .container{
+    margin-top:0;
+    padding:0;
+  }
+</style>
 
-
-{{!-- <div class="l-content" id="oferte" style="border-top: 1px solid gray;">
-    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
-      <div class="l-grid centered position-phone">
-        <a href="/oferte-active/" class="m-button filled">Vezi ofertele active</a>
+<div>
+  <div>
+   <div class="container">
+        <img src="/assets/images/InfoTech1.0.png" alt="LOGO 1" class="image">
+        <div class="light"></div>
       </div>
-      <br>
-      <br>
-      <div class="l-grid centered">
-        {{#get "posts" filter="featured:true" include="authors,tags" limit="5" as |featured|}}
-          {{#if featured}}
-            <div class="m-featured-slider swiper js-featured-slider">
-              <div class="m-featured-slider__list swiper-wrapper">
-                {{#foreach featured}}
-                  <div class="m-featured-slider__list__item swiper-slide">
-                    <article class="m-featured-article {{#unless feature_image}}no-picture{{/unless}}">
-                      <div class="m-featured-article__picture">
-                        {{#if feature_image}}
-                          <style>
-                            #featured-bg-{{id}} {
-                              background-image: url({{img_url feature_image size='l'}});
-                            }
-                            @media(max-width: 768px) {
-                              #featured-bg-{{id}} {
-                                background-image: url({{img_url feature_image size='m'}});
-                              }
-                            }
-                          </style>
-                          <div id="featured-bg-{{id}}"></div>
-                        {{/if}}
-                      </div>
-                      <div class="m-featured-article__meta">
-                        <a href="{{primary_author.url}}" class="m-featured-article__author js-tooltip" aria-label="{{primary_author.name}}" data-tippy-content="{{t "Posted by"}} {{primary_author.name}} {{authors autolink="false" from="2" prefix=(t "Among with") separator=" , "}}">
-                          {{#if primary_author.profile_image}}
-                            <div style="background-image: url({{img_url primary_author.profile_image size="xs"}});"></div>
-                          {{else}}
-                            <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
-                          {{/if}}
-                        </a>
-                        {{#if primary_tag}}
-                          <a href="{{primary_tag.url}}" class="m-featured-article__tag">{{primary_tag.name}}</a>
-                        {{/if}}
-                      </div>
-                      <div class="m-featured-article__ribbon">
-                        <span class="icon-star"></span>
-                        <span>{{t "Featured"}}</span>
-                      </div>
-                      <a href="{{url}}" class="m-featured-article__content">
-                        <h2 class="m-featured-article__title js-featured-article-title" title="{{title}}">
-                          {{title}}
-                        </h2>
-                        <div class="m-featured-article__timestamp">
-                          <span>{{date published_at timeago="true"}}</span>
-                          <span>&bull;</span>
-                          <span>{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</span>
-                        </div>
-                      </a>
-                    </article>
-                  </div>
-                {{/foreach}}
-              </div>
-              <button class="m-icon-button in-featured-articles swiper-button-prev js-featured-slider-button" aria-label="{{t "Previous"}}">
-                <span class="icon-arrow-left" aria-hidden="true"></span>
-              </button>
-              <button class="m-icon-button in-featured-articles swiper-button-next js-featured-slider-button" aria-label="{{t "Next"}}">
-                <span class="icon-arrow-right" aria-hidden="true"></span>
-              </button>
-            </div>
-          {{/if}}
-        {{/get}}
-        {{!-- The tag below iterates over all the posts --}}
-        {{> "loop"}}
+  <script src="/assets/js/lumina.js"></script>
+  </div>
+
+  {{!--
+ <div class="flex-container">
+      <div class="container1">
+        <!-- Conținutul pentru container1 -->
       </div>
-    </div>
-    {{!-- Links to Previous/Next posts --}}
-    
+      <div class="container2">
+        <!-- Conținutul pentru container2 -->
+      </div>
+  </div>
+   <div class="flex-container">
+      <div class="container2">
+        <!-- Conținutul pentru container1 -->
+      </div>
+      <div class="container1">
+        <!-- Conținutul pentru container2 -->
+      </div>
+  </div>
+  <div class="container1">
+    <h2>hsdhjdsbhj</h2>
+  </div>
+</div>
+--}}
+
+<script src="/assets/js/mousemove.js"></script>
+
+
+
+
+
   
+          
 
-{{!-- <div class="l-content" id="oferte" style="border-top: 1px solid gray;">
-    <div class="l-wrapper" data-aos="fade-up" data-aos-delay="300">
-        <div style="display: flex; justify-content:space-around">
-          <button onclick="labsFunction()" class="m-button filled"> laboratoare</button>
-          <button onclick="ofertsFunction()" class="m-button filled">oferte</button>
-          <button  onclick="standsFunction()" class="m-button filled">standuri</button>
-        </div>
-        <br>
-        <br>
-        <div id="ContentAltCeva">
-          <div id="labs" style="display: none" >
-            {{> "labs"}}
-          </div> 
-          <div id="stands" style="display: none">
-            {{> "stands"}}
-          </div>
-          <div id="oferts" style="display: inline">
-            {{> "oferte"}}
-          </div>
-             
-        </div>
-      
-    </div>
-</div> --}}
-
-  {{!-- <section class = "sponsori-content" style="text-align:center">
-         <div class = "category-title platinum">
-            <h1 class = "title-sponsor">Parteneri prezenți la InfoNight</h1>
-         </div>
-         <div class = "card-category">
-            <div class = "card-bg">
-               <div class = "card-img img-1" href="facebook.com"></div>
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-2"></div>
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-3"></div>    
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-4"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-5"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-6"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-7"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-8"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-9"></div>  
-            </div>
-            <div class = "card-bg">
-               <div class = "card-img img-10"></div>  
-            </div>
-  </section> --}}
-</main>
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
@@ -444,4 +98,4 @@ into the {body} of the default.hbs template --}}
   document.getElementById("stands").style.display = "none";
 }
   </script>--}}
-{{/contentFor}}
+{{/contentFor}}  

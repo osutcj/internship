@@ -6,6 +6,7 @@ This template is used for the posts that are marked as pages.
 {{#contentFor "preload"}}
   <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
   <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the post page --}}
@@ -24,31 +25,36 @@ This template is used for the posts that are marked as pages.
     }
 
     .card-grid {
-    margin-top: 3em;
+    margin-top: 5px;
     --auto-grid-min-size: 300px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 2rem 0rem;
+    grid-gap: 53px 0rem;
     grid-auto-rows: 1fr;
     }
 
     .card {
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 4px 8px 0 rgba(202, 206, 7, 0.795);
     width: 300px;
     margin: auto;
     text-align: center;
     border-radius: 10px;
     transition-duration: 400ms;
     height: 100%;
+    margin-top: 20px;
+    margin-left:20px;
     }
-
+    .card{
+    transform: scale(1); /* Grows the containers on hover */
+    box-shadow: 0 8px 16px rgba(236, 214, 14, 0.521); /* Adds shadow on hover */
+    }
     .card img {
     max-width: 300px;
     width: 100%;
     height: 225px;
     object-fit: cover;
     border-radius: 10px;
-    object-position: center;
+    
     }
 
     .card .card-body {
@@ -63,11 +69,14 @@ This template is used for the posts that are marked as pages.
     }
 
     .card .card-body p.role {
-        color: #B50000;
+        color: #ffffffc9;
     }
 
     .icon:hover {
-        color: #B50000;
+        color: #ffffffc9;
+    }
+    .card_td{
+        margin-right:10px;
     }
     </style>
 
@@ -100,101 +109,94 @@ into the {body} of the default.hbs template --}}
                 </figure>
                 {{/if}}
             </header>
-
+    <script src="/assets/js/mousemove.js"></script>
             <section class="container">
 
 
                 <div class="article-title" style="text-align: center;">
                     <h1>Echipa InfoTech</h1>
                 </div>
-
-           
-
-                <h2 style="text-align: center">Echipa de coordonare</h2>
-
-                <div class="card-grid" style="margin-bottom: 15px;">
-                    <div class="card">
-                        <img src="/assets/echipa/Oprisor Mara.jpg">
+<table>
+           <tr>
+           <td>  <div class="card">
+                        <img src="/assets/echipa/MozacuȘtefania_Coordonator.jpg">
                         <div class="card-body">
-                            <h2>Mara Oprișor</h2>
+                            <h2>Mozacu Ștefania</h2>
                             <p class="role">Coordonator</p>
                             <div>
-                                <a class="icon" href="mailto:mailto:mara.oprisor@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:mailto:stefaniamozacu1@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Pteancu Dragos.jpg">
+            </td> 
+            <td>
+                  <div class="card">
+                        <img src="/assets/echipa/HlușcuSarah_Co-coordonator.jpg">
                         <div class="card-body">
-                            <h2>Dragoş Pteancu</h2>
+                            <h2>Hlușcu <br> Sarah</h2>
                             <p class="role">Co-Coordonator</p>
                             <div>
-                                <a class="icon" href="mailto:pteancudragos@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:sarahcristianaa@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Oros Ovidiu-Tiberiu.jpg">
+            </td>
+            <td>
+                     <div class="card">
+                        <img src="/assets/echipa/LivinschiCătălina_Co-coordonator.jpg">
                         <div class="card-body">
-                            <h2>Oros Ovidiu-Tiberiu</h2>
+                            <h2>Livinschi Cătălina</h2>
                             <p class="role">Co-Coordonator</p>
                             <div>
-                                <a class="icon" href="mailto:orosovidiu2002@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:catalinalivinschi97@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Dinis Bianca.jpg">
+            </td>
+             </tr>
+             <tr>
+            <td>
+                      <div class="card">
+                        <img src="/assets/echipa/MuresanDaria_Co-coordonator.jpg">
                         <div class="card-body">
-                            <h2>Bianca Diniș</h2>
-                            <p class="role">Responsabil Electro</p>
+                            <h2>Mureșan Daria</h2>
+                            <p class="role">Co-Coordonator</p>
                             <div>
-                                <a class="icon" href="mailto:dinisbianca11@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:dariamuresan100@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Hlușcu Sarah.jpg" >
+            </td>
+            <td>   <div class="card">
+                        <img src="/assets/echipa/ormideanVlad.jpg">
                         <div class="card-body">
-                            <h2>Hluscu Sarah</h2>
-                            <p class="role">Responsabil Construcții</p>
+                            <h2>Ormindean Vlad</h2>
+                            <p class="role">Responsabil Tehnic</p>
                             <div>
-                                <a class="icon" href="mailto:hluscusarah29@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:ormindeanvlad@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Ilieș Denis.jpeg" >
+            </td>
+            <td>
+                     <div class="card">
+                        <img src="/assets/echipa/HomiucAlexandra_Responsabil_PR.jpg">
                         <div class="card-body">
-                            <h2>Ilies Denis</h2>
-                            <p class="role">Responsabil Mecanica</p>
-                            <div>
-                                <a class="icon" href="mailto:ilies.denis5@gmail.com"><i class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Seulean_Dragos.jpg">
-                        <div class="card-body">
-                            <h2>Seulean Dragos</h2>
-                            <p class="role">Responsabil Logistică</p>
-                            <div>
-                                <a class="icon" href="mailto:dragosseuo@gmail.com"><i class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <img src="/assets/echipa/MozacuStefania.jpg">
-                        <div class="card-body">
-                            <h2>Mozacu Stefania</h2>
+                            <h2>Homiuc Alexandra</h2>
                             <p class="role">Responsabil PR</p>
                             <div>
-                                <a class="icon" href="mailto:stefaniamozacu1@gmail.com"><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:alexandrahomiuc@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div class="card">
-                        <img src="/assets/echipa/Spătăcean Giorgiana.jpeg" >
+            </td>
+         
+            
+            </tr>
+            <tr>
+                  <td>
+                     <div class="card">
+                        <img src="/assets/echipa/SpătăceanGiorgiana_Responsabil_BC.jpg" >
                         <div class="card-body">
                             <h2>Giorgiana Spătăcean</h2>
                             <p class="role">Responsabil BC</p>
@@ -203,16 +205,33 @@ into the {body} of the default.hbs template --}}
                             </div>
                         </div>
                     </div>
+                     </td>
+                     <td>
+                         
                     <div class="card">
-                        <img src="/assets/echipa/Valasutean_Emilia.jpg">
+                        <img src="/assets/echipa/ClimDiana_Secretar.jpeg">
                         <div class="card-body">
-                            <h2>Emilia Valasutean</h2>
+                            <h2>Clim <br> Diana</h2>
                             <p class="role">Secretară</p>
                             <div>
-                                <a class="icon" href="mailto:emiliavalasutean@gmail.com "><i class="fa fa-envelope"></i></a>
+                                <a class="icon" href="mailto:clim.diana2017@gmail.com "><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+                    </td>
+            </tr>
+    </table>
+
+               {{!-- <h2 style="text-align: center">Echipa de coordonare</h2>
+
+                <div class="card-grid" style="margin-bottom: 15px;">
+                  --}}
+                  
+                   
+                  
+                 
+                   
+                  
 
                 </div>
             </section>
@@ -223,4 +242,5 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
   <script defer src="{{asset "js/page.js"}}"></script>
+  
 {{/contentFor}}

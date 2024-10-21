@@ -1,4 +1,4 @@
-import $ from 'jquery';
+ import $ from 'jquery';
 import shave from 'shave';
 import Swiper, { Navigation, A11y } from 'swiper';
 
@@ -28,3 +28,5 @@ $(() => {
 
   shave('.js-featured-article-title', 200);
 });
+
+

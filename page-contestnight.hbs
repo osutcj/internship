@@ -1,0 +1,119 @@
+{{!-- This template is used for the posts that are marked as pages. --}}
+
+{{!-- This block preloads specific assets for the post page --}}
+{{#contentFor "preload"}}
+  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/lumina.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/slideshow.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
+{{/contentFor}}
+
+{{!-- This block loads specific styles for the post page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- Insert everything in this file into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> header background=feature_image}}
+{{/post}}
+
+<main class="main-wrap">
+  {{#post}}
+
+    <div>
+      <div class="container">
+      <div class="titlu">
+        <h1 class="h1">ContestNight</h1>
+        <div class="light"></div>
+      </div>
+      </div>
+      </div>
+
+  
+
+        <div class="container1">
+          <p class="p"><b>ContestNight</b> is not just an event; it’s an experience crafted to empower students to unlock new opportunities and take charge of their future. Taking place on October 22 at <u><a href="https://maps.app.goo.gl/H4f8BkkBaUtemuMt6">HUB UTCN, strada George Barițiu, nr. 4-8</a></u>, from 6 PM to 10 PM, this first edition of ContestNight brings together students, professionals, and organizations in one dynamic space.</p>
+          <p class="p">Curious about how to boost your resume with real-world experience? Interested in testing your skills in national or international challenges? ContestNight has it all, with each stand showcasing different ways to develop yourself both personally and professionally. From cutting-edge engineering contests to chess games, you’ll have the chance to talk directly to the people who can help you get involved, so you can find exactly what sparks your interest.</p>
+        </div>
+
+ 
+ <div class="flex-container1">
+             <div class="container20">
+                <div class="container">
+                     <img src="/assets/images/ContestNight.svg" alt="LOGO 1" >
+                </div>
+            </div>
+       
+              <div class="container5">
+                <p>But it’s not all business—there’s something for everyone! Enjoy live artistic performances, soak in the energetic atmosphere, and take a break in our cozy chill zone, perfect for mingling or simply relaxing between explorations. Whether you're into tech, the arts, sports, or something in between, you'll find something to ignite your interest.</p>
+               </div>
+       
+   </div>
+
+   
+  </div>
+ 
+    
+
+    </div>
+      <br>
+    
+      <h1 class="titlu1">Why Should You Attend?</h1>
+      <br>
+      <br>
+
+      <div class="flex-container3">
+
+        <div class="container3" >
+            <p class="titlu2"><b>Networking</b></p><BR>
+             <P class="p">Meet like-minded peers and connect with representatives from leading student organizations and competitions.</p>
+         </div>
+
+       
+          <div class="container3">
+            <p class="titlu2"><b>Inspiration</b></p><BR>
+            <p class="p"> Get hands-on information about a wide range of student activities that can shape your future career.</p>
+         </div>
+
+            <div class="container3" style="margin-right: 70px;">
+            <p class="titlu2"><b>Entertainment</b></p><BR>
+            <p class="p"> From artistic performances to a welcoming chill zone, ContestNight blends opportunity with fun in a way that’ll make you want to stay until the last minute.</p>
+         </div>
+      </div>
+ <br>
+       <div class="flex-container">
+        <table class="container2">
+          <tr>
+            <td>  <img src="/assets/images/22oct.png" ></td>
+            <td><p class="p"><a href="https://www.google.com/search?q=calendar&rlz=1C1KNTJ_enRO1087RO1087&oq=calendar&gs_lcrp=EgZjaHJvbWUyBggAEEUYQTIOCAEQRRgnGDkYgAQYigUyDAgCECMYJxiABBiKBTIHCAMQABiABDIGCAQQRRg8MgYIBRBFGDwyBggGEEUYPDIGCAcQRRg80gEIMzkxOWowajeoAgiwAgE&sourceid=chrome&ie=UTF-8"><u>Mark your calendars</u></a>, tell your friends, and get ready to seize the endless opportunities that await at ContestNight. Join us, discover your next big adventure, and make your mark on campus and beyond!</p></td>
+          </tr>
+        </table>
+      
+      
+    </div>
+<script src="/assets/js/mousemove.js"></script>
+    <article>
+      <div class="l-content">
+        <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+          <div class="l-post-content">
+            <div class="pos-relative js-post-content">
+              {{content}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  {{/post}}
+</main>
+
+{{!-- Send everything inside up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+{{/contentFor}}
