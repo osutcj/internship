@@ -374,7 +374,7 @@
 
 /* Positioning flex-container below flex-container3 */
 .flex-container3 + .flex-container {
-    margin-top: 20px; /* Space between .flex-container3 and .flex-container */
+    margin-top: 10px; /* Space between .flex-container3 and .flex-container */
 }
 
 .flex-container1 {
@@ -468,7 +468,7 @@
         max-width: 800px;
         flex-direction: column; /* Further reduce minimum height on very small screens */
         justify-content: center;
-        
+    
     }
     .flex-container3 p{
         font-size: 4.25vw;
@@ -486,7 +486,7 @@
     background-color: #8821e92d;
     box-sizing: border-box;
     transition: transform 0.3s ease;
-    margin: 0 auto; /* Centers the container horizontally */
+    margin: auto 0; /* Centers the container horizontally */
 }
 
 /* Responsive styles for larger screens */
