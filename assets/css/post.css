@@ -314,7 +314,7 @@
     align-items: center; /* Center vertically */
     width: 100%; /* Full width */
     height: auto; /* Auto height to adjust based on content */
-    margin: 20px auto; /* Centers the flex container and adds margin below .flex-container3 */
+    margin: 0 auto; /* Centers the flex container and adds margin below .flex-container3 */
 }
 
 .flex-container img {
