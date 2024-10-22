@@ -468,7 +468,7 @@
         max-width: 800px;
         flex-direction: column; /* Further reduce minimum height on very small screens */
         justify-content: center;
-        margin-left: 48px;
+        
     }
     .flex-container3 p{
         font-size: 4.25vw;
