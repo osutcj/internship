@@ -6,7 +6,6 @@ This template is used for the posts that are marked as pages.
 {{#contentFor "preload"}}
   <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
   <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
-  <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the post page --}}
@@ -25,36 +24,31 @@ This template is used for the posts that are marked as pages.
     }
 
     .card-grid {
-    margin-top: 5px;
+    margin-top: 3em;
     --auto-grid-min-size: 300px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 53px 0rem;
+    grid-gap: 2rem 0rem;
     grid-auto-rows: 1fr;
     }
 
     .card {
-    box-shadow: 0 4px 8px 0 rgba(202, 206, 7, 0.795);
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
     width: 300px;
     margin: auto;
     text-align: center;
     border-radius: 10px;
     transition-duration: 400ms;
     height: 100%;
-    margin-top: 20px;
-    margin-left:20px;
     }
-    .card{
-    transform: scale(1); /* Grows the containers on hover */
-    box-shadow: 0 8px 16px rgba(236, 214, 14, 0.521); /* Adds shadow on hover */
-    }
+
     .card img {
     max-width: 300px;
     width: 100%;
     height: 225px;
     object-fit: cover;
     border-radius: 10px;
-    
+    object-position: center;
     }
 
     .card .card-body {
@@ -69,15 +63,41 @@ This template is used for the posts that are marked as pages.
     }
 
     .card .card-body p.role {
-        color: #ffffffc9;
+        color: #B50000;
     }
 
     .icon:hover {
-        color: #ffffffc9;
+        color: #B50000;
     }
-    .card_td{
-        margin-right:10px;
+@media (min-width: 768px) {
+    table {
+        display: table;
+        width: 100%;
     }
+    
+    tr {
+        display: table-row;
+    }
+    
+    td {
+        display: table-cell;
+        padding: 1em;
+        vertical-align: top;
+    }
+}
+
+/* Mobile view (stacked layout) */
+@media (max-width: 767px) {
+    table, tr, td {
+        display: inline-block;
+        width: 100%;
+        
+    }
+    
+    td {
+        margin-bottom: 1.5em;
+    }
+}
     </style>
 
 
@@ -109,10 +129,9 @@ into the {body} of the default.hbs template --}}
                 </figure>
                 {{/if}}
             </header>
-    <script src="/assets/js/mousemove.js"></script>
+
             <section class="container">
-                <BR>
-                <BR>
+
 
                 <div class="article-title" style="text-align: center;">
                     <h1>Echipa InfoTech</h1>
@@ -223,17 +242,6 @@ into the {body} of the default.hbs template --}}
             </tr>
     </table>
 
-               {{!-- <h2 style="text-align: center">Echipa de coordonare</h2>
-
-                <div class="card-grid" style="margin-bottom: 15px;">
-                  --}}
-                  
-                   
-                  
-                 
-                   
-                  
-
                 </div>
             </section>
 
@@ -243,5 +251,4 @@ into the {body} of the default.hbs template --}}
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
   <script defer src="{{asset "js/page.js"}}"></script>
-  
 {{/contentFor}}

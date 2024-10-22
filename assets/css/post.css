@@ -134,21 +134,34 @@
 }
 
 /* Responsive styles for larger screens */
-@media (min-width: 400px) {
+@media (min-width: 0px) {
     .container5 {
         width: 90%; /* Slightly reduce the width on small screens */
-        height: 80%; /* Adjust height for small screens */
+        height: 350px; /* Adjust height for small screens */
         margin: 0 auto;
+        max-height: 600px;
     }
     .container5 p{
         font-size: 100%;
     }
 }
+@media (min-width: 400px) {
+    .container5 {
+        width: 90%; /* Slightly reduce the width on small screens */
+        height: 480px; /* Adjust height for small screens */
+        max-height: 600px;
+    }
+    .container5 p{
+        font-size: 90%;
+    }
+}
+
 
 @media (min-width: 768px) {
     .container5 {
         width: 90%; /* Slightly reduce the width on small screens */
         height: 300px; /* Increase height for larger screens */
+        max-height: 600px;
     }
     .container5 p{
         font-size: 120%;
@@ -159,6 +172,7 @@
     .container5 {
         width: 90%; /* Slightly reduce the width on small screens */
         height: 300px; /* Adjust height for larger screens */
+        max-height: 600px;
     }
     .container5 p{
         font-size: 120%;
@@ -170,58 +184,78 @@
         width: 90%; /* Slightly reduce the width on small screens */
         height: 300px; /* Increase height on very large screens */
         margin: 0 auto;
+        max-height: 600px;
     }
     .container5 p{
         font-size: 120%;
     }
 }
 
+@media (min-width: 0px) {
+    .container20 {
+        width: 90%; /* Slightly reduce the width on small screens */
+        height: 350px; /* Adjust height for small screens */
+        margin: 0 auto;
+        max-height: 600px;
+    }
+    .container20 img{
+        margin-top: 70px;
+        height: 210px;
+        width: 100%;
+    }
+}
 @media (min-width: 400px) {
     .container20 {
         width: 90%; /* Slightly reduce the width on small screens */
-        height: 80%; /* Adjust height for small screens */
+        height: 480px; /* Adjust height for small screens */
         margin: 0 auto;
+        max-height: 600px;
     }
     .container20 img{
         margin-top: 100px;
+        height: 280px;
         width: 100%;
-        height: auto;
+        
     }
 }
 
 @media (min-width: 768px) {
     .container20 {
         width: 90%; /* Slightly reduce the width on small screens */
-        height: 70%; /* Increase height for larger screens */
+        height: 300px; /* Increase height for larger screens */
+        max-height: 600px;
     }
     .container20 img{
         margin-top: 10px;
+        height: 280px;
         width: 90%;
-        height: 70%;
+        
     }
 }
 
 @media (min-width: 1024px) {
     .container20 {
         width: 90%; /* Slightly reduce the width on small screens */
-        height: 70%; /* Adjust height for larger screens */
+        height: 300px; /* Adjust height for larger screens */
+        max-height: 600px;
     }
     .container20 img{
         margin-top: 10px;
         width: 90%;
-        height: 70%;
+        height: 280px;
     }
 }
 
 @media (min-width: 1200px) {
     .container20 {
         width: 90%; /* Slightly reduce the width on small screens */
-        height: 70%; /* Increase height on very large screens */
+        height: 300px; /* Increase height on very large screens */
+        max-height: 600px;
     }
     .container20 img{
         margin-top: 10px;
         width: 90%;
-        height: 70%;
+        height: 280px;
     }
 }
 
@@ -242,7 +276,7 @@
 @media (max-width: 480px) {
     .flex-container1 {
         height: 500px;
-        max-height: 500px;
+        max-height: 800px;
         width: 800px;
         max-width: 800px;
         flex-direction: column; /* Further reduce minimum height on very small screens */
@@ -517,7 +551,16 @@
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Prevent the image from exceeding the container */
 }
+@media (min-width: 0px) {
+    .container2 {
+        width: 80%; /* Increase the container width on medium screens */
+        max-width: 80%;
+    }
 
+    .container2 img {
+        width: 85%; /* Adjust the image width accordingly */
+    }
+}
 @media (min-width: 400px) {
     .container2 {
         width: 80%; /* Increase the container width on medium screens */
@@ -672,6 +715,7 @@
     .container5, .container3, .container20 {
         width: 70%;
         height: 300px;
+        max-height: 600px;
     }
 }
 
@@ -687,6 +731,7 @@
     .container5, .container3, .container20 {
         width: 60%;
         height: 300px;
+        max-height: 600px;
     }
 }
 
@@ -702,5 +747,6 @@
     .container5, .container3, .container20 {
         width: 50%;
         height: 300px;
+        max-height: 600px;
     }
 }
