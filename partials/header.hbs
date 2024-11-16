@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {{!--
 This header template is shared across all the pages.
 --}}
@@ -131,3 +132,174 @@ This header template is shared across all the pages.
 
   
 </header>
+=======
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  /* Style for the hamburger menu button */
+  .menu {
+    cursor: pointer;
+    position: fixed;
+    top: 20px; /* Position the button at the top */
+    left: 20px; /* Position the button to the left */
+    z-index: 3; /* Ensure it stays above other elements */
+    opacity: 1;
+  }
+
+  /* Hamburger bar styles */
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333333;
+    margin: 6px 0; /* Space between bars */
+    transition: 0.4s; /* Smooth transition for the "X" animation */
+    opacity: 1;
+  }
+
+  /* Animation when the hamburger icon changes to "X" */
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+
+  .change .bar2 {
+    opacity: 0; /* Hide the middle bar */
+  }
+
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+
+  /* Sidebar (vertical navigation bar) styles */
+/* Sidebar (vertical navigation bar) styles */
+.sidenav {
+    height: 100vh; /* Full-height sidebar */
+    width: 0; /* Initial hidden width */
+    position: fixed; /* Fixed position */
+    top: 0;
+    left: 0;
+    background-color: #161616; /* Dark background - solid */
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* Smooth transition when opening/closing */
+    padding-top: 70px; /* Padding from the top */
+    opacity: 1; /* Make sure it’s fully opaque */
+    z-index: 2;
+}
+
+
+  /* Links inside the sidebar */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+  }
+
+  /* Hover effect for the links */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  /* When the sidebar is open */
+  .sidenav.open {
+    width: 250px; /* Width of the open sidebar */
+  }
+
+  /* Make the links visible when the sidebar is fully open */
+  .sidenav.show-links a {
+    opacity: 1; /* Show the links */
+  }
+
+  /* Style for InfoTech button */
+  .buton-infotech {
+    height: auto;
+    width: 90%;
+  }
+
+  @media only screen and (max-width: 769px) {
+    .buton-infotech img {
+      height: auto;
+      width: 90%;
+      margin-bottom: 2%;
+      margin-left: 1vh;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .buton-infotech img {
+      height: auto;
+      width: 90%;
+      margin-bottom: 2%;
+      margin-left: 1vh;
+    }
+  }
+
+  /* Style for Osut button */
+  .buton-osut {
+    position: absolute;
+    bottom: 150px; /* Position 20px from the bottom */
+    width: 100%;
+    height: 54px;
+  }
+
+  .buton-osut img {
+    height: 80px;
+    width: 180px;
+  }
+
+</style>
+
+<!-- Hamburger Button -->
+<div class="menu" onclick="toggleNav(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
+<!-- Vertical Sidebar -->
+<div id="mySidenav" class="sidenav">
+  <a class="buton-infotech" href="http://localhost:2368" title="InfoTech" target="_blank">
+    <img src="/assets/images/InfoTech1.0.png">
+  </a>
+  <a href="http://localhost:2368/about-2/">Despre</a>
+  <a href="http://localhost:2368/echipa/">Echipa</a>
+  <a href="http://localhost:2368/sponsori-infotech/">Partners</a>
+  <a href="http://localhost:2368/contestnight/">ContestNight</a>
+  <a href="https://osutcluj.pixieset.com/">Galerie</a>
+  <a class="buton-osut" href="https://osut.org" title="Osut" target="_blank">
+    <img src="/assets/images/OSUT alb.png">
+  </a>
+</div>
+
+<script>
+  // Function to toggle both the button animation and the sidebar
+  function toggleNav(x) {
+    x.classList.toggle("change"); // Toggle the hamburger button animation
+    var nav = document.getElementById("mySidenav");
+
+    if (nav.classList.contains("open")) {
+      // If the menu is open, hide the links first, then close the sidebar
+      nav.classList.remove("show-links");
+      setTimeout(function() {
+        nav.classList.remove("open");
+      }, 200); // Wait for the links to fade out before closing the sidebar
+    } else {
+      // If the menu is closed, open the sidebar first, then show the links
+      nav.classList.add("open");
+      setTimeout(function() {
+        nav.classList.add("show-links");
+      }, 200); // Wait for the sidebar to fully open before showing the links
+    }
+  }
+
+  // Reset sidebar and menu button to initial state when leaving the page
+  window.addEventListener("beforeunload", function() {
+    var nav = document.getElementById("mySidenav");
+    nav.classList.remove("open", "show-links"); // Close the sidebar
+    var menuButton = document.querySelector(".menu");
+    menuButton.classList.remove("change"); // Reset the hamburger button
+  });
+</script>
+>>>>>>> 3113e61 (first commit)

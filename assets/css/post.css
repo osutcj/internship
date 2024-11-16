@@ -15,10 +15,16 @@
     overflow: hidden;
     white-space: nowrap;
 }
+<<<<<<< HEAD
 
 .main-wrap {
     width: 100%;
     max-width: 1200px;
+=======
+.main-wrap {
+    width: 100%;
+    max-width: 100vw; /* Make sure the width covers the full viewport */
+>>>>>>> 3113e61 (first commit)
     position: relative;
     z-index: 1;
     padding-top: 20px; /* Reduced padding for mobile */
@@ -31,16 +37,29 @@
     position: absolute;
     top: 0;
     left: 0;
+<<<<<<< HEAD
     width: 100%;
     height: 100%;
     background-image: url('/assets/images/ContestNight.svg');
     background-size: cover;
     background-position: center;
+=======
+    width: 100vw; /* Set the width to 100% of the viewport */
+    height: 100vh; /* Set the height to 100% of the viewport */
+    background-image: url('/assets/images/ContestNight.svg');
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center center; /* Center the background image both horizontally and vertically */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+>>>>>>> 3113e61 (first commit)
     filter: blur(10px);
     z-index: -1;
     opacity: 0.8;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3113e61 (first commit)
 .center-wrapper {
     display: flex;              /* Enable flexbox */
     justify-content: center;    /* Horizontally center */
@@ -314,7 +333,11 @@
     align-items: center; /* Center vertically */
     width: 100%; /* Full width */
     height: auto; /* Auto height to adjust based on content */
+<<<<<<< HEAD
     margin: 20px auto; /* Centers the flex container and adds margin below .flex-container3 */
+=======
+    margin: 0 auto; /* Centers the flex container and adds margin below .flex-container3 */
+>>>>>>> 3113e61 (first commit)
 }
 
 .flex-container img {
@@ -374,7 +397,11 @@
 
 /* Positioning flex-container below flex-container3 */
 .flex-container3 + .flex-container {
+<<<<<<< HEAD
     margin-top: 20px; /* Space between .flex-container3 and .flex-container */
+=======
+    margin-top: 10px; /* Space between .flex-container3 and .flex-container */
+>>>>>>> 3113e61 (first commit)
 }
 
 .flex-container1 {
@@ -394,12 +421,22 @@
     display: flex;
     flex-direction: row; /* Aligns child elements in a row */
     justify-content: center; /* Centers the containers horizontally */
+<<<<<<< HEAD
     align-items: stretch; /* Ensure containers stretch to equal heights */
     gap: 10px; /* Adds space between the containers */
     margin:  auto; /* Centers the flex container with equal left and right margins */
     padding: 0; /* Remove any padding from the flex container */
     max-width: 90%; /* Restrict the container width to 90% of the viewport */
   
+=======
+    align-items: center; /* Ensure containers stretch to equal heights */
+    gap: 10px; /* Adds space between the containers */
+    margin: 0 auto; /* Centers the flex container with equal left and right margins */
+    padding: 0; /* Remove any padding from the flex container */
+    max-width: 90%;
+    max-height: 100vh; /* Restrict the container width to 90% of the viewport */
+    flex-wrap: wrap; /* Ensure containers wrap and don't overflow */
+>>>>>>> 3113e61 (first commit)
 }
 
 /* For larger screens, reduce the max-width further */
@@ -411,18 +448,27 @@
 
 /* Container3 styling for equal heights */
 .container3 {
+<<<<<<< HEAD
     flex: 1; /* Ensures all .container3 elements take up equal space */
     max-width: 40%; /* Controls the maximum width */
    /* Sets a minimum height for consistency */
     max-height: max-content;
     /* Ensures height matches other containers */
+=======
+    flex: 1 1 40%; /* Ensures all .container3 elements take up equal space, set flex-basis to 40% */
+    max-width: 40%; /* Controls the maximum width */
+>>>>>>> 3113e61 (first commit)
     border-color: #918390;
     border-style: double;
     border-radius: 15px;
     background-color: #930aee28;
     box-sizing: border-box;
     transition: transform 0.3s ease;
+<<<<<<< HEAD
     margin: 0; /* Remove any margin from the container */
+=======
+    margin: 10px; /* Add margin for spacing between containers */
+>>>>>>> 3113e61 (first commit)
     padding: 0; /* Remove any padding from the container */
 }
 
@@ -451,9 +497,16 @@
         font-size: 110%;
     }
 }
+<<<<<<< HEAD
 @media (min-width: 400px) {
     .container3 {
         max-height: 600px; /* Set minimum height for smaller screens */
+=======
+@media (min-width: 480px) {
+    .container3 {
+         margin: 10px auto;
+        
+>>>>>>> 3113e61 (first commit)
     }
     .container3 p{
         font-size: 110%;
@@ -461,6 +514,7 @@
 }
 
 @media (max-width: 480px) {
+<<<<<<< HEAD
     .flex-container3 {
         height: 800px;
         max-height: 800px;
@@ -470,6 +524,16 @@
         justify-content: center;
         margin-left: 48px;
     }
+=======
+    .flex-container3   
+     {
+        flex-direction: column; /* Stack elements vertically on small screens */
+        height: auto; /* Allow the container to adjust height based on content */
+        max-height: 100%;
+        width: 100%; /* Ensure the container takes full width on small screens */
+    }
+
+>>>>>>> 3113e61 (first commit)
     .flex-container3 p{
         font-size: 4.25vw;
     }
@@ -486,7 +550,11 @@
     background-color: #8821e92d;
     box-sizing: border-box;
     transition: transform 0.3s ease;
+<<<<<<< HEAD
     margin: 0 auto; /* Centers the container horizontally */
+=======
+    margin: auto 0; /* Centers the container horizontally */
+>>>>>>> 3113e61 (first commit)
 }
 
 /* Responsive styles for larger screens */

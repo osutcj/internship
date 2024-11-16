@@ -5,6 +5,7 @@ It can be used also as the home page or the default page.
 
 {{!-- This block preloads specific assets for the index page --}}
 {{#contentFor "preload"}}
+<<<<<<< HEAD
   <link rel="preload" href="{{asset "css/home.css"}}" as="style" />
   <link rel="preload" href="{{asset "css/listing.css"}}" as="style" />
   <link rel="preload" href="{{asset "js/home.js"}}" as="script" />
@@ -12,6 +13,12 @@ It can be used also as the home page or the default page.
   <link rel="preload" href="{{asset "js/slideshow.js"}}" as="script" />
   <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
 
+=======
+ <link rel="preload" href="{{asset "js/lumina.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/slideshow.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/modal.js"}}" as="script" />
+>>>>>>> 3113e61 (first commit)
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the index page --}}
@@ -20,7 +27,13 @@ It can be used also as the home page or the default page.
   <link rel="stylesheet" type="text/css" href="{{asset "css/listing.css"}}" media="screen" />
   <link rel="stylesheet" href="{{asset "css/bootstrap-landing.css"}}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori.css"}}" media="screen" />
+<<<<<<< HEAD
 {{/contentFor}}
+=======
+{{/contentFor}}  <link rel="preload" href="{{asset "css/home.css"}}" as="style" />
+  <link rel="preload" href="{{asset "css/listing.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/home.js"}}" as="script" />
+>>>>>>> 3113e61 (first commit)
 
 {{!-- The tag below means: insert everything in this file
 into the {body} of the default.hbs template --}}
@@ -29,6 +42,7 @@ into the {body} of the default.hbs template --}}
 {{!-- Special header.hbs partial to generate the <header> tag --}}
 {{> header background=@site.cover_image}}
 
+<<<<<<< HEAD
 <style>
   .container{
     margin-top:0;
@@ -36,6 +50,13 @@ into the {body} of the default.hbs template --}}
   }
 </style>
 
+=======
+`<main class="main-wrap">
+  
+
+<br>
+  <br>
+>>>>>>> 3113e61 (first commit)
 <div>
   <div>
    <div class="container">
@@ -45,6 +66,7 @@ into the {body} of the default.hbs template --}}
   <script src="/assets/js/lumina.js"></script>
   </div>
 
+<<<<<<< HEAD
   {{!--
  <div class="flex-container">
       <div class="container1">
@@ -71,6 +93,107 @@ into the {body} of the default.hbs template --}}
 <script src="/assets/js/mousemove.js"></script>
 
 
+=======
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <h2 class="modal-content" id="img01" style="width:50%;" ></h2>
+        <h1 id="modalTitle" style="text-align: center; margin-top:2vh; "></h1>
+       <h2 id="modalSubtitle" style="display: flex; flex-direction: column; align-items: center; text-align: center; margin: 0 auto;"></h2>
+       <div id="caption"></div>
+    </div>
+
+  
+ <div class="flex-container">
+      <div class="container2" style="background-image: url('./assets/images/interview.png'); background-size:cover; background-blend-mode: lighten;">
+          <h2 class="myImg" style="width:100%;max-width:300px" data-title="How to Interview " data-subtitle=
+          "Date: November 21st, 20:00 
+           Location: OA4 - CFDP 
+           Trainer: Cristina Gogozan" 
+          data-caption="A successful job interview can make all the difference when it comes to securing your ideal position. In this workshop, Cristina Gogozan will help you master the art of the job interview. You'll learn how to effectively prepare for interviews, including researching the company, anticipating common questions, and developing thoughtful responses. Cristina will also share strategies for building rapport with interviewers, communicating your strengths confidently, and handling tricky or unexpected questions. This interactive session will give you the practical skills and confidence needed to make a positive impression and stand out in any interview setting. "> Read More</h2>       
+     
+      </div>
+      <div class="container1" style="background-image: url('./assets/images/start_UP.jpg'); background-size:cover; ">
+        
+          <h2 class="myImg" style="width:100%;max-width:300px" data-title="How to Start a Startup" data-subtitle=
+          "Date: November 7th, 18:00
+          Location: OA5 - CFDP
+          Trainer: Georgina Lupu (Gina) "
+
+          data-caption="Starting your own business can be both exciting and daunting. This workshop, led by Georgina Lupu, will take you through the fundamentals of launching a startup. You’ll learn about identifying viable business ideas, developing a business plan, securing funding, and the key challenges faced by new entrepreneurs. Whether you're already working on a startup or just exploring the idea of entrepreneurship, this session will provide you with the tools and mindset needed to succeed. ">Read More</h2>
+             </div>
+      </div>
+  </div>
+   <div class="flex-container">
+      <div class="container1" style="background-image: url('./assets/images/CV.jpg'); background-size:cover; ">
+          <h2 class="myImg" style="width:100%;max-width:300px" data-title="How to CV " data-subtitle=
+          "Date: October 30th, 18:00 
+          Location: A3 - CFDP 
+          Trainer: Mariana Irimia " 
+          data-caption="A well-crafted CV is often your first point of contact with potential employers, making it a crucial part of your job application process. In this workshop, led by Mariana Irimia, you'll learn how to structure and present your CV to highlight your most important skills and experiences. The session will cover common mistakes to avoid, tips for tailoring your CV to different industries, and how to stand out in a competitive job market. Mariana's expertise will help ensure that your CV leaves a strong impression and effectively communicates your qualifications to employers. "> Read More</h2>       
+     
+      </div>
+      <div class="container2" style="background-image: url('./assets/images/ContestNight.png'); background-size:cover; ">
+        <h2 style="width:100%;max-width:300px"><a href="http://localhost:2368/contestnight/">Read More</a></h2>
+             </div>
+      </div>
+  </div>
+  
+</div>
+</article>
+</main> 
+<script src="/assets/js/mousemove.js"></script>
+<script>
+// Select modal elements
+var modal = document.getElementById("myModal");
+var modalImg = document.getElementById("img01");
+var modalTitle = document.getElementById("modalTitle");
+var modalSubtitle = document.getElementById("modalSubtitle");
+var captionText = document.getElementById("caption");
+
+// Select all images with the class myImg
+var images = document.querySelectorAll(".myImg");
+
+// Add event listener for each image
+images.forEach(function(img) {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        modalTitle.textContent = this.getAttribute("data-title");
+
+        // Split the subtitle by newline and join as separate lines
+        var subtitleText = this.getAttribute("data-subtitle").split('\n').join('<br>');
+        modalSubtitle.innerHTML = subtitleText;
+
+        captionText.textContent = this.getAttribute("data-caption");
+    }
+});
+
+// Close modal when clicking the close button
+var span = document.getElementsByClassName("close")[0];
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+window.addEventListener('unload', function () {
+  const modal = document.getElementById('myModal');
+  if (modal.style.display === 'block') {
+    // Close the modal if it's open
+    modal.style.display = 'none';
+    // Reset any form inside the modal
+    document.getElementById('modalForm').reset();
+  }
+});
+
+
+</script>
+>>>>>>> 3113e61 (first commit)
 
 
 
@@ -98,4 +221,8 @@ into the {body} of the default.hbs template --}}
   document.getElementById("stands").style.display = "none";
 }
   </script>--}}
+<<<<<<< HEAD
 {{/contentFor}}  
+=======
+{{/contentFor}}  
+>>>>>>> 3113e61 (first commit)
