@@ -1,0 +1,583 @@
+{{!--
+This template is used for the posts that are marked as pages.
+--}}
+
+{{!-- This block preloads specific assets for the post page --}}
+{{#contentFor "preload"}}
+  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+{{/contentFor}}
+
+{{!-- This block loads specific styles for the post page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori2.css"}}" media="screen" />
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> header background=feature_image}}
+{{/post}}
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+.container {
+  max-width: 124rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+.text-center {
+  text-align: center;
+}
+.section-heading {
+  font-size: 3rem;
+  color: var(--primary);
+  padding: 2rem 0;
+}
+@media (max-width:1440px) {
+  #tranding {
+    padding: 7rem 0;
+  }
+}
+#tranding .tranding-slider {
+  height: 52rem;
+  padding: 2rem 0;
+  position: relative;
+}
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+}
+.tranding-slide {
+  width: 37rem;
+  height: 42rem;
+  position: relative;
+}
+@media (max-width:500px) {
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+.tranding-slide .tranding-slide-img img {
+  width: 37rem;
+  height: 42rem;
+  border-radius: 2rem;
+  object-fit: cover;
+}
+.tranding-slide .tranding-slide-content {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+.tranding-slide-content .food-price {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: var(--white);
+}
+.tranding-slide-content .tranding-slide-content-bottom {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  color: var(--white);
+}
+.food-rating {
+  padding-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.rating ion-icon {
+  color: var(--primary);
+}
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+.tranding-slider-control {
+  position: relative;
+  bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tranding-slider-control .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+.tranding-slider-control .slider-arrow {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+.tranding-slider-control .slider-arrow ion-icon {
+  font-size: 2rem;
+  color: #222224;
+}
+.tranding-slider-control .slider-arrow::after {
+  content: '';
+}
+.tranding-slider-control .swiper-pagination {
+  position: relative;
+  width: 15rem;
+  bottom: -0.3rem;
+}
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+.tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
+  background: black;
+}
+
+ .custom-map {
+
+        overflow: hidden;
+
+        padding-bottom: 60%;
+
+        position: relative;
+
+        height: 0;
+
+    }
+
+    .csutom-map iframe {
+
+        left: 0;
+
+        top: 0;
+
+        height: 100%;
+
+        width: 100%;
+
+        position: absolute;
+
+    }
+    
+</style>
+
+<!--Test-->
+<main class="main-wrap">
+  {{!-- Everything inside the #post tags pulls data from the post --}}
+  {{#post}}
+    {{!-- Inject styles of the hero image to make it responsive --}}
+    {{> hero background=feature_image}}
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">{{title}}</h1>
+      {{#if custom_excerpt}}
+        <p class="m-hero-description">{{custom_excerpt}}</p>
+      {{/if}}
+    </div>
+    </section>
+    {{!-- <article>
+      <div class="l-content">
+        <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+          <div class="l-post-content">
+            <div class="pos-relative js-post-content">
+              {{content}}
+                <div class = "custom-map">
+                    <center>
+                        <iframe src="https://www.google.com/maps/d/u/1/embed?mid=172O8MLTNuyDDOQdHtHSi4dFHzGEHgm0&ehbc=2E312F" 
+                        width="50%" height="600" frameborder="0" style="border:0;" 
+                        allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                    </center>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article> --}}
+  {{/post}}
+  <div class = "category-title platinum" style="text-align:center">
+            <h1 class = "title-sponsor">Vezi cum a fost anul trecut</h1>
+            <br>
+         </div>
+
+
+<section id="tranding">
+      
+      <div class="container">
+        <div class="swiper tranding-slider">
+          <div class="swiper-wrapper">
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/1.jpg" >
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/2.jpg">
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/3.jpg">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/4.jpg">
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/5.jpg">
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/6.jpg">
+              </div>
+              
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/7.jpg">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/8.jpg">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/9.jpg">
+              </div>
+            </div>
+            <!-- Slide-end -->
+            <!-- Slide-start -->
+            <div class="swiper-slide tranding-slide">
+              <div class="tranding-slide-img">
+                <img src="/content/images/carousel_infotech_2023/10.jpg">
+              </div>
+            </div>
+            <!-- Slide-end -->
+          </div>
+
+          <div class="tranding-slider-control">
+            <div class="swiper-button-prev slider-arrow">
+              <ion-icon name="arrow-back-outline"></ion-icon>
+            </div>
+            <div class="swiper-button-next slider-arrow">
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class = "sponsori-content">
+         <div class = "category-title platinum">
+            <br>
+            <h1 class = "title-sponsor">Sponsorii Ediției 2023</h1>
+            <br>
+            <br>
+            <br>
+            <h1 class = "title-sponsor">Diamond</h1>
+         </div>
+
+         <div class = "card-category">
+            <h3> </h3>
+            <div class = "card-bg card-diamond">
+               <div class = "card-img img-1"></div>
+              <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-diamond">
+               <div class = "card-img img-2"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+         </div>
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Platinum</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-3"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-4"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-5"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-7"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-8"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-9"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-platinum">
+               <div class = "card-img img-10"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+         </div>
+
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Gold<span class = "line"></h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-gold">
+               <div class = "card-img img-11"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-gold">
+               <div class = "card-img img-12"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+         </div>
+         </div>
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Silver</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-13"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-14"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-15"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-16"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-17"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+
+
+</div> 
+<div class = "category-title platinum">
+            <h1 class = "title-sponsor">Bronze</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-bronze">
+               <div class = "card-img img-18"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            
+            
+                 <div class = "card-bg card-bronze">
+               <div class = "card-img img-19"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+                
+         </div>
+
+      </section>
+
+
+    <section class = "sponsori-content" style="text-align:center">
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Parteneri prezenți la InfoNight 2023</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg">
+               <div class = "card-img img-1" href="facebook.com"></div>
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-2"></div>
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-3"></div>    
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-4"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-5"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-6"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-7"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-8"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-9"></div>  
+            </div>
+            <div class = "card-bg">
+               <div class = "card-img img-10"></div>  
+            </div>
+
+
+
+  </section>
+</main>
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script  src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+  var TrandingSlider = new Swiper('.tranding-slider', {
+  effect: 'coverflow',
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 'auto',
+  coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 100,
+    modifier: 2.5,
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }
+});
+</script>
+{{/contentFor}}

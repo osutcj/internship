@@ -1,0 +1,164 @@
+
+
+{{!--
+This template is used for the posts that are marked as pages.
+--}}
+
+{{!-- This block preloads specific assets for the post page --}}
+{{#contentFor "preload"}}
+  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+{{/contentFor}}
+
+{{!-- This block loads specific styles for the post page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori2024.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> header background=feature_image}}
+{{/post}}
+
+<main id="site-main" class="site-main">
+
+        
+      <section class = "sponsori-content">
+         <div class = "category-title platinum">
+            <br>
+            <br>
+            <br>
+            <br>
+            <h1 class = "title-sponsor">Main Partners</h1>
+         </div>
+
+         <div class = "card-category">
+
+            <div class = "card-bg card-diamond">
+               <div class = "card-img img-1"></div>
+              <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+
+            <div class = "card-bg card-diamond">
+               <div class = "card-img img-2"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+         </div>
+         
+
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Standard Partners<span class = "line"></h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-gold">
+               <div class = "card-img img-5"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-gold">
+               <div class = "card-img img-6"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            
+         </div>
+         <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Basic Partners</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-8"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-9"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-10"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-11"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-3"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            <div class = "card-bg card-silver">
+               <div class = "card-img img-4"></div>
+                <div class="icon-h">
+                     {{!-- <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a> --}}
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+         </div>
+         
+</div> 
+{{!-- <div class = "category-title platinum">
+            <h1 class = "title-sponsor">Bronze</h1>
+         </div>
+         <div class = "card-category">
+            <div class = "card-bg card-bronze">
+               <div class = "card-img img-18"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+            
+            
+                 <div class = "card-bg card-bronze">
+               <div class = "card-img img-19"></div>
+                <div class="icon-h">
+                     <a class="icon" href="mailto:"><i class="fa fa-envelope"></i></a>
+                     <a class="icon" href=""><i class="fa fa-globe"></i></a>
+               </div>
+            </div>
+                
+         </div>--}}
+
+      </section>
+    
+    </article>
+
+
+</main> 
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+{{/contentFor}}
+
+

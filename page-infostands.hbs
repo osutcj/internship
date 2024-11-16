@@ -1,0 +1,128 @@
+{{!--
+This template is used for the posts that are marked as pages.
+--}}
+
+{{!-- This block preloads specific assets for the post page --}}
+{{#contentFor "preload"}}
+  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+  <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
+{{/contentFor}}
+
+{{!-- This block loads specific styles for the post page --}}
+{{#contentFor "styles"}}
+  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{{asset "css/orar-stands.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> header background=feature_image}}
+{{/post}}
+<main class="main-wrap">
+  {{!-- Everything inside the #post tags pulls data from the post --}}
+  {{#post}}
+    {{!-- Inject styles of the hero image to make it responsive --}}
+    {{> hero background=feature_image}}
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">{{title}}</h1>
+      {{#if custom_excerpt}}
+        <p class="m-hero-description">{{custom_excerpt}}</p>
+      {{/if}}
+    </div>
+    </section>
+    <div class="l-content">
+        <div class="l-wrapper in-post" data-aos="fade-up" data-aos-delay="300">
+          <div class="l-post-content">
+            <div class="pos-relative js-post-content" style="text-align: center">
+              <div>
+                <p>📍Facultatea de Automatică și Calculatoare, Facultatea de Electronică, Telecomunicații și Tehnologia Informației, Faculatatea de Inginerie Electrică</p>
+                <div>
+                  <div>
+                    <p>Luni - 4 Martie</p>
+                    <p>🕒 11:50 - 14:10 - Synopsys</p>
+                  </div>
+                  <div>
+                    <p>Marți - 5 Martie</p>
+                    <p>🕒 11:50 - 14:00 - Synopsys</p>
+                    <p>🕒 10:00 - 14:00 - Emerson</p>
+                  </div>
+                  <div>
+                    <p>Joi - 7 Martie</p>
+                    <p>🕒 11:50 - 14:00 - Synopsys</p>
+                    <p>🕒 10:00 - 14:00 - Emerson</p>
+                  </div>
+                  <div>
+                    <p>Vineri - 8 Martie</p>
+                    <p>🕒 11:50 - 14:10 - Synopsys</p>
+                  </div>
+                </div>
+                <div style="height: 5rem;"></div>
+                <p>📍Facultatea de Construcții</p>
+                <div>
+                  <div>
+                    <p>Luni - 4 Martie</p>
+                    <p>🕒 10:00 - 16:00 - Con-A</p>
+                  </div>
+                  <div>
+                    <p>Marți - 5 Martie</p>
+                    <p>🕒 10:00 - 14:00 - Con-A</p>
+                  </div>
+                </div>
+                <div style="height: 5rem;"></div>
+                <p>📍Facultatea de Autovehicule Rutiere, Mecatronică și Mecanica, Facultatea de Inginerie Industrială, Robotică și Managementul Producției, Facultatea de Ingineria Materialelor și a Mediului</p>
+                <div>
+                  <div>
+                    <p>Marți - 5 Martie</p>
+                    <p>🕒 10:00 - 14:00 - Emerson</p>
+                  </div>
+                  <div>
+                      <p>Miercuri - 6 Martie</p>
+                      <p>🕒 10:00 - 14:00 - Emerson</p>
+                  </div>
+                </div>
+                <div style="height: 5rem;"></div>
+                <p>📍Facultatea de Inginerie a Instalațiilor</p>
+                <div>
+                  <div>
+                    <p>Marți - 5 Martie</p>
+                    <p>🕒 10:00 - 14:00 - IRSAP</p>
+                  </div>
+                  <div>
+                    <p>Miercuri - 6 Martie</p>
+                    <p>🕒 10:00 - 14:00 - IRSAP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  {{/post}}
+</main>
+
+
+{{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
+{{#contentFor "scripts"}}
+  <script defer src="{{asset "js/page.js"}}"></script>
+{{/contentFor}}
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>

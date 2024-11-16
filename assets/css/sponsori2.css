@@ -1,0 +1,305 @@
+body {
+    margin: 0;
+}
+
+
+:root {
+    --font-size-title: 2rem;
+    --font-size-title-small: 2rem;
+    --font-size-title-smaller: 2rem;
+    --font-size-card: 2rem;
+    --font-size-card-small: 2rem;
+    --font-size-card-smaller: 2rem;
+    --black: white;
+    --white: black;
+    --secondary: rgb(237, 28, 36);
+    --secondary-transparent: rgba(237, 28, 35);
+}
+
+.img-1 {
+    background-image: url("/content/images/sponsors/diamond/logo-arobs.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.img-2 {
+    background-image: url("/content/images/sponsors/diamond/logo-continental.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.img-3 {
+    background-image: url("/content/images/sponsors/platinum/logo-broadbridge.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-4 {
+    background-image: url("/content/images/sponsors/platinum/logo-emerson.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-5 {
+    background-image: url("/content/images/sponsors/platinum/logo-marelli.svg");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-6 {
+    background-image: url("/content/images/sponsors/platinum/logo-nagarro.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-7 {
+    background-image: url("/content/images/sponsors/platinum/logo-pfeiffer.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-8 {
+    background-image: url("/content/images/sponsors/platinum/logo-synopsys.png");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-9 {
+    background-image: url("/content/images/sponsors/platinum/logo-ultratech.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-10 {
+    background-image: url("/content/images/sponsors/platinum/logo-nagarro.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-11 {
+    background-image: url("/content/images/sponsors/gold/logo-kesz.jpg");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-12 {
+    background-image: url("/content/images/sponsors/gold/logo-riverbed.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-13 {
+    background-image: url("/content/images/sponsors/silver/logo-autonet.jpg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-14 {
+    background-image: url("/content/images/sponsors/silver/logo-cona.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-15 {
+    background-image: url("/content/images/sponsors/silver/logo-linnify.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-16 {
+    background-image: url("/content/images/sponsors/silver/logo-mediserv.svg");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-17 {
+    background-image: url("/content/images/sponsors/silver/logo-rootier.png");
+    background-size: 200%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-18 {
+    background-image: url("/content/images/sponsors/bronze/logo-fanuc.png");
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.img-19 {
+    background-image: url("/content/images/sponsors/bronze/logo-hilti.svg");
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+
+.icon-h {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    margin: 5px;
+    transform: scale(1.2);
+}
+
+.title-sponsor {
+    font-size: var(--font-size-title);
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+.line {
+    color: var(--secondary);
+}
+
+
+.sponsori-content {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-category {
+    flex: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 75px;
+    margin-right: 75px;
+    justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card-bg {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    width: 250px;
+    height: 250px;
+    padding: 30px;
+    border-radius: 2rem;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.card-diamond{
+    box-shadow: #61e2ffa6 10px 5px 4px 5px; 
+}
+.card-platinum{
+    box-shadow: #72b5b5a6 10px 5px 4px 5px; 
+}
+.card-gold{
+    box-shadow: #ffd900a6  10px 5px 4px 5px; 
+}
+.card-silver{
+    box-shadow: #ada9aac6 10px 5px 4px 5px; 
+}
+.card-bronze{
+    box-shadow: #CD7F32a6 10px 5px 4px 5px; 
+}
+
+.card-bg:hover {
+    transform: scale(1.05);
+}
+
+
+.card-img {
+    
+    width: 225px;
+    height: 225px;
+    align-self: center;
+    justify-self: center;
+}
+
+.carousel {
+    width:720px;
+    height:480px;
+  }
+
+#container-carousel{
+    display: flex;
+    justify-content:center;
+}
+
+@media (prefers-color-scheme: light) {
+    .card-bg {
+        margin: 25px;
+        width: 300px;
+        padding: 30px;
+        background: #333;
+        color: white;
+        background-color: white;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .title-sponsor {
+        font-size: var(--font-size-title-small);
+        font-weight: 900;
+    }
+
+    .card-category {
+        margin-bottom: 100px;
+    }
+
+    .card-bg {
+        margin: 25px;
+        width: 300px;
+        padding: 30px;
+        background: #333;
+        color: white;
+        background-color: white;
+    }
+
+    .card-title {
+        font-size: var(--font-size-card-small);
+    }
+
+    .card-img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 30px;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .title-sponsor {
+        font-size: var(--font-size-title-smaller);
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+    }
+
+    .card-category {
+        margin-bottom: 100px;
+    }
+
+    .card-bg {
+        margin: 25px 0;
+        width: 270px;
+        padding: 30px;
+        background-color: white;
+    }
+
+    .card-title {
+        font-size: var(--font-size-card-smaller);
+    }
+
+    .card-img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 30px;
+    }
+}
