@@ -4,17 +4,18 @@ It can be used also as the home page or the default page.
 --}}
 
 {{!-- This block preloads specific assets for the index page --}}
+{{!-- This template is used for the index page. --}}
+
 {{#contentFor "preload"}}
- <link rel="preload" href="{{asset "js/lumina.js"}}" as="script" />
+  <link rel="preload" href="{{asset "js/lumina.js"}}" as="script" />
   <link rel="preload" href="{{asset "js/slideshow.js"}}" as="script" />
   <link rel="preload" href="{{asset "js/mousemove.js"}}" as="script" />
   <link rel="preload" href="{{asset "js/modal.js"}}" as="script" />
   <link rel="preload" href="{{asset "js/echipa.css"}}" as="script" />
   <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
-    <link rel="preload" href="{{asset "css/home.css"}}" as="style" />
+  <link rel="preload" href="{{asset "css/home.css"}}" as="style" />
   <link rel="preload" href="{{asset "css/listing.css"}}" as="style" />
   <link rel="preload" href="{{asset "js/home.js"}}" as="script" />
-
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the index page --}}
@@ -26,7 +27,9 @@ It can be used also as the home page or the default page.
   <link rel="stylesheet" type="text/css" href="{{asset "css/sponsori2024.css"}}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{{asset "css/echipa.css"}}" media="screen" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-{{/contentFor}}  
+{{/contentFor}}
+
+
 
 {{!-- The tag below means: insert everything in this file
 into the {body} of the default.hbs template --}}
