@@ -4,12 +4,17 @@ This template is used for the posts that are marked as pages.
 
 {{!-- This block preloads specific assets for the post page --}}
 {{#contentFor "preload"}}
+<<<<<<< HEAD
   <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+=======
+  <link rel="preload" href="{{asset "js/echipa.css"}}" as="script" />
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
   <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the post page --}}
 {{#contentFor "styles"}}
+<<<<<<< HEAD
   <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
 {{/contentFor}}
 
@@ -98,6 +103,14 @@ This template is used for the posts that are marked as pages.
         margin-bottom: 1.5em;
     }
 }
+=======
+  <link rel="stylesheet" type="text/css" href="{{asset "css/echipa.css"}}" media="screen" />
+{{/contentFor}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+ 
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
     </style>
 
 
@@ -131,11 +144,16 @@ into the {body} of the default.hbs template --}}
             </header>
 <br>
       <br>
+<<<<<<< HEAD
             <section class="container">
+=======
+            <section >
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 
 <br>
 <br>
 <br>
+<<<<<<< HEAD
                 <div class="article-title" style="text-align: center;">
                     <h1>Echipa InfoTech</h1>
                 </div>
@@ -157,24 +175,59 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/HlușcuSarah_Co-coordonator.jpg">
                         <div class="card-body">
                             <h2>Hlușcu <br> Sarah</h2>
+=======
+                <div style="text-align: center;">
+                    <h1 class="title"><i>MEET THE TEAM</i></h1>
+                   
+                </div>
+                
+<div class="card-grid">
+
+            <div class="container">
+                         <img src="/assets/echipa/tefi.png">
+                        <div class="card-body">
+                            <h2 class="h2">Mozacu Ștefania</h2>
+                            <p class="role">Coordonator</p>
+                            <div>
+                               <a class="icon overlay" href="mailto:mailto:stefaniamozacu1@gmail.com">
+                                    <i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+              
+
+            <div class="container">
+                       <img src="/assets/echipa/sarah.png">
+                        <div class="card-body">
+                             <h2 class="h2">Hlușcu Sarah</h2>
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:sarahcristianaa@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
             </td>
             <td>
                      <div class="card">
                         <img src="/assets/echipa/LivinschiCătălina_Co-coordonator.jpg">
                         <div class="card-body">
                             <h2>Livinschi Cătălina</h2>
+=======
+
+            <div class="container">
+                        <img src="/assets/echipa/cata.png">
+                        <div class="card-body">
+                            <h2 class="h2">Livinschi Cătălina</h2>
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:catalinalivinschi97@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
             </td>
              </tr>
              <tr>
@@ -183,12 +236,22 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/MuresanDaria_Co-coordonator.jpg">
                         <div class="card-body">
                             <h2>Mureșan Daria</h2>
+=======
+
+
+           
+                      <div class="container">
+                        <img src="/assets/echipa/daria.png">
+                        <div class="card-body">
+                            <h2 class="h2">Mureșan Daria</h2>
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:dariamuresan100@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
             </td>
             <td>   <div class="card">
                         <img src="/assets/echipa/ormideanVlad.jpg">
@@ -222,12 +285,42 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/SpătăceanGiorgiana_Responsabil_BC.jpg" >
                         <div class="card-body">
                             <h2>Giorgiana Spătăcean</h2>
+=======
+
+             <div class="container">
+                        <img src="/assets/echipa/dutu.png">
+                        <div class="card-body">
+                            <h2 class="h2">Ormindean Vlad</h2>
+                            <p class="role">Responsabil Tehnic</p>
+                            <div>
+                                <a class="icon overlay" href="mailto:ormindeanvlad@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+         
+                     <div class="container">
+                        <img src="/assets/echipa/ale.png">
+                        <div class="card-body">
+                            <h2 class="h2">Homiuc Alexandra</h2>
+                            <p class="role">Responsabil PR</p>
+                            <div>
+                                <a class="icon overlay" href="mailto:alexandrahomiuc@gmail.com"><i class="fa fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+        
+                     <div class="container">
+                        <img src="/assets/echipa/gio.png">
+                        <div class="card-body">
+                            <h2 class="h2">Giorgiana Spătăcean</h2>
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Responsabil BC</p>
                             <div>
                                 <a class="icon" href="mailto:sgiorgiana02@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                      </td>
                      <td>
                          
@@ -235,17 +328,32 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/ClimDiana_Secretar.jpeg">
                         <div class="card-body">
                             <h2>Clim <br> Diana</h2>
+=======
+                    
+                         
+                    <div class="container">
+                        <img src="/assets/echipa/diana.png">
+                        <div class="card-body">
+                            <h2 class="h2">Clim  Diana</h2>
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Secretară</p>
                             <div>
                                 <a class="icon" href="mailto:clim.diana2017@gmail.com "><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     </td>
             </tr>
     </table>
 
                 </div>
+=======
+     
+                </div>
+
+        
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
             </section>
 
         </article>

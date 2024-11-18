@@ -51,13 +51,21 @@
     }
 }
 
+<<<<<<< HEAD
 .m-featured-slider__list__item {
+=======
+.m-featured-slider_list_item {
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
     height: 100%;
     overflow: hidden;
 }
 
 @media only screen and (min-width: 48rem) {
+<<<<<<< HEAD
     .m-featured-slider__list__item {
+=======
+    .m-featured-slider_list_item {
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
         border-radius: 10px;
     }
 }
@@ -260,6 +268,7 @@
     height: 100%;
     overflow: hidden; /* Ascunde partea mărită a imaginii */
 }
+<<<<<<< HEAD
 .container1{
     position: relative;
     width:60%;
@@ -270,6 +279,71 @@
     margin-bottom: 15px;
     box-shadow: 0 2px 8px rgb(229, 255, 0);
 }
+=======
+
+
+
+
+.h1 {
+    text-align: center;
+    color: #35005a;
+    font-size: 2rem; /* Default font size */
+    margin:0;
+}
+
+@media (min-width: 600px) {
+    .h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .h1 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .h1 {
+        font-size: 4rem;
+    }
+}
+
+
+
+.container1{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 5120 / 3413; /* Adjust to the aspect ratio of your image */
+    border: 2px solid #35005a;
+    background-color: #35005a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgb(255, 248, 64);
+
+    /* Centering using Flexbox */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.container1 h2 {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    color: #35005a;
+    background-color: rgb(255, 248, 64); /* Yellow background */
+    padding: 3px 3px; /* Reduced space around the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+}
+
+
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 .container1 {
     transition: transform 0.3s ease; /* Adaugă o tranziție lină */
     
@@ -277,6 +351,7 @@
   
   .container1:hover {
     transform: scale(1.05); /* Mărește containerul cu 5% la hover */
+<<<<<<< HEAD
     box-shadow: 0 8px 16px rgba(229, 255, 0, 0.2);
   }
 .container2{
@@ -291,6 +366,43 @@
    
 
 }
+=======
+    box-shadow: 0 8px 16px rgba(255, 248, 64, 0.2);
+
+  }
+  .container2{
+    position: relative;
+    width: 50%;
+    aspect-ratio: 5120 / 3413; /* Adjust to the aspect ratio of your image */
+    border: 2px solid #35005a;
+    background-color: #35005a;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgb(255, 248, 64);
+
+    /* Centering using Flexbox */
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+}
+
+.container2 h2 {
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centers text horizontally */
+    align-items: center; /* Centers text vertically */
+    color: #35005a;
+    background-color: rgb(255, 248, 64); /* Yellow background */
+    padding: 3px 3px; /* Reduced space around the text */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional: Adds a shadow for better visibility */
+}
+
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 .container2 {
     transition: transform 0.3s ease; /* Adaugă o tranziție lină */
     
@@ -298,16 +410,71 @@
   
   .container2:hover {
     transform: scale(1.05); /* Mărește containerul cu 5% la hover */
+<<<<<<< HEAD
     box-shadow: 0 8px 16px rgba(229, 255, 0, 0.2);
+=======
+    box-shadow: 0 8px 16px rgba(255, 248, 64, 0.2);
+
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
   }
 
   .flex-container {
     display: flex;
+<<<<<<< HEAD
     justify-content: space-between; /* Spațiu egal între elemente */
     align-items: center; /* Aliniere verticală la centru */
     margin: 20px; /* Adaugă margini în jurul containerului părinte */
   }
   
+=======
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media only screen and (max-width: 700px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .container1{
+        width: 90%; /* Full width for stacking */
+        margin-left: 0; /* Adjust margin if needed */
+        margin-bottom: 20px; /* Add some space between stacked containers */
+        height: 50%;
+    } 
+    
+    .container2 {
+        width: 90%; /* Full width for stacking */
+        margin-left: 0; /* Adjust margin if needed */
+        margin-bottom: 20px; /* Add some space between stacked containers */
+        height: 50%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .flex-container {
+        flex-direction: column;
+    }
+    
+    .container1{
+        width: 90%; /* Full width for stacking */
+        margin-left: 0; /* Adjust margin if needed */
+        margin-bottom: 20px; /* Add some space between stacked containers */
+        height: 50%;
+        font-size: 80%;
+    } 
+    
+    .container2 {
+        width: 90%; /* Full width for stacking */
+        margin-left: 0; /* Adjust margin if needed */
+        margin-bottom: 20px; /* Add some space between stacked containers */
+        height: 50%;
+    }
+}
+
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
   
 .image {
     width: 100%;
@@ -327,18 +494,25 @@
     transform: translate(-50%, -50%); /* Muta centrul luminii la coordonate */
     opacity: 0;
     transition: opacity 0.2s ease;
+<<<<<<< HEAD
 }
 
 .container:hover .image {
     filter: brightness(100%);
 }   
+=======
+}  
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 
 .container:hover .light {
     opacity: 1; /* Lumina apare când cursorul este peste imagine */
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 .slideshow-container {
     position: relative;
     width: 100%;
@@ -357,4 +531,197 @@
   }
   
   
+<<<<<<< HEAD
   
+=======
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+    border-radius: 5px;
+    text-align: justify;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+  }
+  
+  #myImg:hover {opacity: 0.7;}
+
+  .register {
+    margin: 30px auto;
+    padding: 5px 15px; /* Reduced padding for smaller size */
+    font-size: 20px; /* Smaller font size */
+    border-radius: 4px; /* Rounded corners */
+    text-align: center; /* Align text within the button */
+    background-color: #FFF840; /* Button color */
+    color: #35005a; /* Text color */
+    cursor: pointer;
+    transition: 0.3s;
+    display: inline-block; /* Ensure proper layout for centering */
+    border: none; /* Remove any default border */
+}
+  
+  .register:hover {opacity: 0.7;}
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    
+    z-index: 1; /* Sit on top */
+    padding-top: 20vh; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: #35005a; /* Fallback color */
+    background-color: rgba(53, 0, 90,0.8);/* Black w/ opacity */
+  }
+  
+  
+  .modal-content {
+    margin: auto;
+    display: block;
+    width: 100%;
+    max-width: 100vw; /* Prevents overflow horizontally */
+    max-height: 100vh;
+    color: #ffffff;
+  }
+  
+  /* Caption of Modal Image (Image Text) - Same Width as the Image */
+  #caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    text-align: center;
+    color: #ccc;
+    padding: 1vh 0;
+    height: auto;
+    margin-top: 5vh;
+    width: 60%;
+    align-items: center;
+    font-style: justify;
+    border: #f1f1f1;
+    border-style: dotted;
+  }
+  
+  /* Add Animation - Zoom in the Modal */
+  .modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+      /* Mobile Styles */
+      @media (max-width: 767px) {
+        .modal {
+            padding-top: 10vh; /* Move modal higher on mobile */
+        }
+    
+        .modal-content {
+            padding: 15px;
+            font-size: 1rem;
+            width: 100%;
+        }
+    
+        .close {
+            top: 5vh; /* Adjust close button position */
+            font-size: 30px;
+        }
+    
+        #caption {
+            width: 90%;
+            margin-top: 2vh; /* Reduce margin on mobile */
+        }
+    }
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 10vh;
+    right: 10vw;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+.submenu {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.submenu button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    color: #b0b0b0; /* Gray color for text */
+    padding: 15px 20px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.submenu button:hover {
+    color: #35005a; /* White text on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.submenu button.active {
+    color:#FFF840;/* White text for active button */
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+    .submenu {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        margin-bottom: 30px;
+    }
+    
+    .submenu button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        color: #b0b0b0; /* Gray color for text */
+        padding: 13px 13px;
+        transition: color 0.3s, transform 0.2s;
+    }
+    
+    .submenu button:hover {
+        color: #35005a; /* White text on hover */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+    
+    .submenu button.active {
+        color:#FFF840;
+    }
+    
+    .content {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    
+}
+>>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
