@@ -4,113 +4,18 @@ This template is used for the posts that are marked as pages.
 
 {{!-- This block preloads specific assets for the post page --}}
 {{#contentFor "preload"}}
-<<<<<<< HEAD
-  <link rel="preload" href="{{asset "css/post.css"}}" as="style" />
-=======
   <link rel="preload" href="{{asset "js/echipa.css"}}" as="script" />
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
   <link rel="preload" href="{{asset "js/page.js"}}" as="script" />
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the post page --}}
 {{#contentFor "styles"}}
-<<<<<<< HEAD
-  <link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
-{{/contentFor}}
-
-<style>
-    .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100vw;
-    max-width: 1024px;
-    margin: 0 auto;
-    }
-
-    .card-grid {
-    margin-top: 3em;
-    --auto-grid-min-size: 300px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-    grid-gap: 2rem 0rem;
-    grid-auto-rows: 1fr;
-    }
-
-    .card {
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
-    width: 300px;
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-    transition-duration: 400ms;
-    height: 100%;
-    }
-
-    .card img {
-    max-width: 300px;
-    width: 100%;
-    height: 225px;
-    object-fit: cover;
-    border-radius: 10px;
-    object-position: center;
-    }
-
-    .card .card-body {
-    text-align: center;
-    padding: 1em 2em;
-    }
-
-    .card .card-body h2 {
-    margin: 0 0 .5em;
-    font-weight: 700;
-    font-size: 2rem;
-    }
-
-    .card .card-body p.role {
-        color: #B50000;
-    }
-
-    .icon:hover {
-        color: #B50000;
-    }
-@media (min-width: 768px) {
-    table {
-        display: table;
-        width: 100%;
-    }
-    
-    tr {
-        display: table-row;
-    }
-    
-    td {
-        display: table-cell;
-        padding: 1em;
-        vertical-align: top;
-    }
-}
-
-/* Mobile view (stacked layout) */
-@media (max-width: 767px) {
-    table, tr, td {
-        display: inline-block;
-        width: 100%;
-        
-    }
-    
-    td {
-        margin-bottom: 1.5em;
-    }
-}
-=======
   <link rel="stylesheet" type="text/css" href="{{asset "css/echipa.css"}}" media="screen" />
 {{/contentFor}}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
  
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
     </style>
 
 
@@ -144,38 +49,11 @@ into the {body} of the default.hbs template --}}
             </header>
 <br>
       <br>
-<<<<<<< HEAD
-            <section class="container">
-=======
             <section >
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 
 <br>
 <br>
 <br>
-<<<<<<< HEAD
-                <div class="article-title" style="text-align: center;">
-                    <h1>Echipa InfoTech</h1>
-                </div>
-<table>
-           <tr>
-           <td>  <div class="card">
-                        <img src="/assets/echipa/MozacuȘtefania_Coordonator.jpg">
-                        <div class="card-body">
-                            <h2>Mozacu Ștefania</h2>
-                            <p class="role">Coordonator</p>
-                            <div>
-                                <a class="icon" href="mailto:mailto:stefaniamozacu1@gmail.com"><i class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-            </td> 
-            <td>
-                  <div class="card">
-                        <img src="/assets/echipa/HlușcuSarah_Co-coordonator.jpg">
-                        <div class="card-body">
-                            <h2>Hlușcu <br> Sarah</h2>
-=======
                 <div style="text-align: center;">
                     <h1 class="title"><i>MEET THE TEAM</i></h1>
                    
@@ -200,43 +78,23 @@ into the {body} of the default.hbs template --}}
                        <img src="/assets/echipa/sarah.png">
                         <div class="card-body">
                              <h2 class="h2">Hlușcu Sarah</h2>
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:sarahcristianaa@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-            </td>
-            <td>
-                     <div class="card">
-                        <img src="/assets/echipa/LivinschiCătălina_Co-coordonator.jpg">
-                        <div class="card-body">
-                            <h2>Livinschi Cătălina</h2>
-=======
 
             <div class="container">
                         <img src="/assets/echipa/cata.png">
                         <div class="card-body">
                             <h2 class="h2">Livinschi Cătălina</h2>
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:catalinalivinschi97@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-            </td>
-             </tr>
-             <tr>
-            <td>
-                      <div class="card">
-                        <img src="/assets/echipa/MuresanDaria_Co-coordonator.jpg">
-                        <div class="card-body">
-                            <h2>Mureșan Daria</h2>
-=======
 
 
            
@@ -244,48 +102,12 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/daria.png">
                         <div class="card-body">
                             <h2 class="h2">Mureșan Daria</h2>
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Co-Coordonator</p>
                             <div>
                                 <a class="icon" href="mailto:dariamuresan100@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-            </td>
-            <td>   <div class="card">
-                        <img src="/assets/echipa/ormideanVlad.jpg">
-                        <div class="card-body">
-                            <h2>Ormindean Vlad</h2>
-                            <p class="role">Responsabil Tehnic</p>
-                            <div>
-                                <a class="icon" href="mailto:ormindeanvlad@gmail.com"><i class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-            </td>
-            <td>
-                     <div class="card">
-                        <img src="/assets/echipa/HomiucAlexandra_Responsabil_PR.jpg">
-                        <div class="card-body">
-                            <h2>Homiuc Alexandra</h2>
-                            <p class="role">Responsabil PR</p>
-                            <div>
-                                <a class="icon" href="mailto:alexandrahomiuc@gmail.com"><i class="fa fa-envelope"></i></a>
-                            </div>
-                        </div>
-                    </div>
-            </td>
-         
-            
-            </tr>
-            <tr>
-                  <td>
-                     <div class="card">
-                        <img src="/assets/echipa/SpătăceanGiorgiana_Responsabil_BC.jpg" >
-                        <div class="card-body">
-                            <h2>Giorgiana Spătăcean</h2>
-=======
 
              <div class="container">
                         <img src="/assets/echipa/dutu.png">
@@ -313,47 +135,28 @@ into the {body} of the default.hbs template --}}
                         <img src="/assets/echipa/gio.png">
                         <div class="card-body">
                             <h2 class="h2">Giorgiana Spătăcean</h2>
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Responsabil BC</p>
                             <div>
                                 <a class="icon" href="mailto:sgiorgiana02@gmail.com"><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                     </td>
-                     <td>
-                         
-                    <div class="card">
-                        <img src="/assets/echipa/ClimDiana_Secretar.jpeg">
-                        <div class="card-body">
-                            <h2>Clim <br> Diana</h2>
-=======
                     
                          
                     <div class="container">
                         <img src="/assets/echipa/diana.png">
                         <div class="card-body">
                             <h2 class="h2">Clim  Diana</h2>
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
                             <p class="role">Secretară</p>
                             <div>
                                 <a class="icon" href="mailto:clim.diana2017@gmail.com "><i class="fa fa-envelope"></i></a>
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-                    </td>
-            </tr>
-    </table>
-
-                </div>
-=======
      
                 </div>
 
         
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
             </section>
 
         </article>

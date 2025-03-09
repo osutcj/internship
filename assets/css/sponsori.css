@@ -215,8 +215,6 @@ body {
         height: 150px;
         margin-bottom: 30px;
     }
-<<<<<<< HEAD
-=======
 }
 
 .scroll-container {
@@ -287,5 +285,4 @@ body {
     width: 0vw; /* Gap between the last and first logo */
     flex-shrink: 0;
   }
->>>>>>> cc76361ea1380282e0583cc77f982a8ecbda561b
 }
